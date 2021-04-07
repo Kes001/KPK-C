@@ -33,7 +33,6 @@ void drawSun         (int x,  int y, int r, int eyes, double koso = 0, int tang 
 void drawCloud       (int x,  int y, int r);
 void drawPuddle      (int t,  int size);
 
-
 int main()
     {
     txCreateWindow (w, h);
