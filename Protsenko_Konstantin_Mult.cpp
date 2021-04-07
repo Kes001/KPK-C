@@ -59,11 +59,11 @@ void drawStartTitles ()
         txSetFillColor (TX_BLACK);
         txSetColor     (TX_WHITE);
         txSelectFont   ("TimesNewRoman", 150);
-        txTextOut      (w + 200 - t * 13, 100, "Посвящается");
+        txTextOut      (w + 200 - t * 13, 100, "ГЏГ®Г±ГўГїГ№Г ГҐГІГ±Гї");
 
         txSetColor     (TX_WHITE);
         txSelectFont   ("Ariel", 130);
-        txTextOut      (w + 500 - t * 17, 250, "Дню космонавтики");
+        txTextOut      (w + 500 - t * 17, 250, "Г„Г­Гѕ ГЄГ®Г±Г¬Г®Г­Г ГўГІГЁГЄГЁ");
 
         txSleep (100);
         t++;
@@ -107,7 +107,7 @@ void drawEpisode1 ()
 
     txSetColor     (TX_WHITE);
     txSelectFont   ("Ariel", 50);
-    txTextOut      (200, 350, "Абра - кадабра");
+    txTextOut      (200, 350, "ГЂГЎГ°Г  - ГЄГ Г¤Г ГЎГ°Г ");
     txSleep        (2000);
 
     drawBackground ();
@@ -127,7 +127,7 @@ void drawEpisode1 ()
 
     txSetColor     (TX_WHITE);
     txSelectFont   ("Ariel", 50);
-    txTextOut      (200, 350, "Что-то не то натворил ...");
+    txTextOut      (200, 350, "Г—ГІГ®-ГІГ® Г­ГҐ ГІГ® Г­Г ГІГўГ®Г°ГЁГ« ...");
 
     txSleep        (2000);
 
@@ -245,7 +245,7 @@ void drawEpisode3 ()
 
     txSetColor   (TX_WHITE);
     txSelectFont ("Comic Sans MS", 60, 30, true, true, false, false, 15);
-    txTextOut    (100, 300, "ОСТАНАВИТЕСЬ!!!");
+    txTextOut    (100, 300, "ГЋГ‘Г’ГЂГЌГЂГ‚Г€Г’Г…Г‘Гњ!!!");
     txSleep (1000);
 
     t = 0;
@@ -265,7 +265,7 @@ void drawEpisode3 ()
             {
             txSetColor     (TX_WHITE);
             txSelectFont   ("Ariel", 50);
-            txTextOut      (20, 300, "Вот оно - настоящее чудо!");
+            txTextOut      (20, 300, "Г‚Г®ГІ Г®Г­Г® - Г­Г Г±ГІГ®ГїГ№ГҐГҐ Г·ГіГ¤Г®!");
             }
 
         txSleep    (100);
@@ -345,7 +345,6 @@ void drawSun      (int x, int y, int r, int eyes, double koso, int tong)
     POINT tongue[] = {{x - r/3, y + r/3}, {x, y + tong + r/2},
                       {x + r/3, y + r/3}, {x - r/3,  y + r/3}};
     txPolygon (tongue, 4);
-
     }
 
 void drawRoof     (int x1, int x2, int y, COLORREF roof_color)
@@ -358,7 +357,6 @@ void drawRoof     (int x1, int x2, int y, COLORREF roof_color)
 
 void drawWindows  (int x1, int y1, int x2, int y2, int count)
     {
-
     txSetColor     (RGB (255, 255, 255), 2);
 
     int d = 10;
@@ -494,13 +492,13 @@ void drawEndTitles ()
         txSetFillColor (TX_BLACK);
         txSetColor     (TX_WHITE);
         txSelectFont   ("Ariel", 150);
-        txTextOut      (w + 100 - t * 25, 160, "Юра, мы ничего не забыли!");
+        txTextOut      (w + 100 - t * 25, 160, "ГћГ°Г , Г¬Г» Г­ГЁГ·ГҐГЈГ® Г­ГҐ Г§Г ГЎГ»Г«ГЁ!");
 
         txSleep (100);
         t++;
         }
     txSelectFont ("Ariel", 60);
-    txTextOut    (50, 300, "Выполнил: Проценко Константин Сергеевич");
-    txTextOut    (200, 500, "г. Магнитогорск, 2021 год");
+    txTextOut    (50, 300, "Г‚Г»ГЇГ®Г«Г­ГЁГ«: ГЏГ°Г®Г¶ГҐГ­ГЄГ® ГЉГ®Г­Г±ГІГ Г­ГІГЁГ­ Г‘ГҐГ°ГЈГҐГҐГўГЁГ·");
+    txTextOut    (200, 500, "ГЈ. ГЊГ ГЈГ­ГЁГІГ®ГЈГ®Г°Г±ГЄ, 2021 ГЈГ®Г¤");
     txSleep      (3000);
     }
