@@ -14,6 +14,8 @@
 #include "TXLib.h"
 #include <cstdlib>
 
+//-----------------------------------------------------------------------------
+
 int w = 1100;
 int h = 600;
 
@@ -46,6 +48,8 @@ void drawSun         (int x,  int y, int r, int eyes, double koso = 0, int tang 
 void drawCloud       (int x,  int y, int r);
 void drawPuddle      (int t,  int size);
 
+//-----------------------------------------------------------------------------
+
 int main()
     {
     txCreateWindow (w, h);
@@ -60,6 +64,8 @@ int main()
 
     return 0;
     }
+
+//-----------------------------------------------------------------------------
 
 void drawStartTitles ()
     {
@@ -84,11 +90,14 @@ void drawStartTitles ()
         }
     }
 
+//-----------------------------------------------------------------------------
+
 void drawBackground  ()
     {
     drawSky    ( 0,   0);
     drawGround ( 0, 540);
     }
+//-----------------------------------------------------------------------------
 
 void drawSky      (int x, int y)
     {
@@ -97,6 +106,8 @@ void drawSky      (int x, int y)
 
     txRectangle    (x, y, x + w, y + h);
     }
+
+//-----------------------------------------------------------------------------
 
 void drawGround   (int x, int y)
     {
@@ -113,6 +124,8 @@ void drawGround   (int x, int y)
         step += x + (w - x)/5;
         }
     }
+
+//-----------------------------------------------------------------------------
 
 void drawEpisode1 ()
     {
@@ -163,6 +176,8 @@ void drawEpisode1 ()
         }
     }
 
+//-----------------------------------------------------------------------------
+
 void drawRain     (int x, int y, int sizeY)
     {
     int tr = 1;
@@ -180,6 +195,8 @@ void drawRain     (int x, int y, int sizeY)
         }
     }
 
+//-----------------------------------------------------------------------------
+
 void drawPuddle   (int t, int size)
     {
     txSetFillColor (RGB (150, 210, 235));
@@ -189,6 +206,8 @@ void drawPuddle   (int t, int size)
     txEllipse (w - 450, h - 30, w - 450 + size + t/2, h - 50 + size/2 + t/4);
     txEllipse (w - 750, h - 60, w - 550 + size + t/2, h - 50 + size/2 + t/4);
     }
+
+//-----------------------------------------------------------------------------
 
 void drawEpisode2 ()
     {
@@ -225,12 +244,16 @@ void drawEpisode2 ()
         }
     }
 
+//-----------------------------------------------------------------------------
+
 void drawHouses   (int t)
     {
     drawHouse (840, 280, 1.8, 1.3, TX_BLACK,    10 + t%10, 10 + t%10, 3 - t%2, 10 + t%10);
     drawHouse (540, 300, 1.3, 1.2, TX_DARKGRAY, 20 + t%10, -5 + t%10, 1 + t%2, 30 + t%10);
     drawHouse (240, 340, 1,   1,   TX_MAGENTA,  30 + t%10, 25 + t%10, 2 + t%2, 10 + t%10);
     }
+
+//-----------------------------------------------------------------------------
 
 void drawEpisode3 ()
     {
@@ -287,6 +310,8 @@ void drawEpisode3 ()
         }
     }
 
+//-----------------------------------------------------------------------------
+
 void drawRocket   (int x, int y, double sizeX, double sizeY, COLORREF rocket_color, int t)
     {
     txSetFillColor (rocket_color);
@@ -332,6 +357,8 @@ void drawRocket   (int x, int y, double sizeX, double sizeY, COLORREF rocket_col
     txPolygon (rfire, 4);
     }
 
+//-----------------------------------------------------------------------------
+
 void drawSun      (int x, int y, int r, int eyes, double koso, int tong)
     {
     txSetFillColor (RGB (255, 255, 25));
@@ -361,6 +388,8 @@ void drawSun      (int x, int y, int r, int eyes, double koso, int tong)
     txPolygon (tongue, 4);
     }
 
+//-----------------------------------------------------------------------------
+
 void drawRoof     (int x1, int x2, int y, COLORREF roof_color)
     {
     txSetColor (roof_color, 10);
@@ -368,6 +397,8 @@ void drawRoof     (int x1, int x2, int y, COLORREF roof_color)
     txLine (x1, y, x1 + (x2 - x1)/2, y - 0.5 * (x2 - x1));
     txLine (x1 + (x2 - x1)/2, y - 0.5 * (x2 - x1), x2, y);
     }
+
+//-----------------------------------------------------------------------------
 
 void drawWindows  (int x1, int y1, int x2, int y2, int count)
     {
@@ -388,6 +419,8 @@ void drawWindows  (int x1, int y1, int x2, int y2, int count)
         }
     }
 
+//-----------------------------------------------------------------------------
+
 void drawHouse    (int x, int y, double sizeX, double sizeY, COLORREF house_color,
                    int roof_h, int roof_w, int windows, int door)
     {
@@ -406,6 +439,8 @@ void drawHouse    (int x, int y, double sizeX, double sizeY, COLORREF house_colo
     txRectangle    (x + 50*sizeX, y + (100 + door)*sizeY, x + 100*sizeX, y + 200*sizeY);
     }
 
+//-----------------------------------------------------------------------------
+
 void drawCloud    (int x, int y, int r)
     {
     txSetFillColor (RGB (128, 128, 128));
@@ -415,6 +450,8 @@ void drawCloud    (int x, int y, int r)
     txCircle  (x + 2*r, y, r);
     txEllipse (x,       y - r, x + 2*r, y + r);
     }
+
+//-----------------------------------------------------------------------------
 
 void drawLightning (int x, int y, double sizeX, double sizeY, COLORREF light_color)
     {
@@ -434,6 +471,8 @@ void drawLightning (int x, int y, double sizeX, double sizeY, COLORREF light_col
                          {x, y}};
     txPolygon (lightning, 12);
     }
+
+//-----------------------------------------------------------------------------
 
 void drawCar       (int x, int y, double sizeX, double sizeY, COLORREF car_color,
                     int janitor, double window, double wheel, double lights)
@@ -472,6 +511,8 @@ void drawCar       (int x, int y, double sizeX, double sizeY, COLORREF car_color
     txCircle       (x + 2.55*sizeX, y + 0.7*sizeY, lights/100*sizeX);
     }
 
+//-----------------------------------------------------------------------------
+
 void drawMan       (int x, int y, double sizeX, double sizeY, COLORREF skin_color,
                     double rhand, double lhand, double legs,  double jezl, double eyes)
     {
@@ -495,6 +536,8 @@ void drawMan       (int x, int y, double sizeX, double sizeY, COLORREF skin_colo
 
     txLine (x + sizeX/1.2, y - (0.7 + rhand) * sizeY, x + sizeX/1.2, y - (0.8 + jezl)*sizeY);
     }
+
+//-----------------------------------------------------------------------------
 
 void drawEndTitles ()
     {
