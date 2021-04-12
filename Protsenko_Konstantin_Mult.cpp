@@ -67,6 +67,7 @@ void drawStartTitles ()
 
     while (t <= 85)
         {
+        txBegin ();
         txClear ();
         txSetFillColor (TX_BLACK);
         txSetColor     (TX_WHITE);
@@ -78,6 +79,7 @@ void drawStartTitles ()
         txTextOut      (w + 500 - t * 17, 250, "Дню космонавтики");
 
         txSleep (100);
+        txEnd ();
         t++;
         }
     }
@@ -500,13 +502,15 @@ void drawEndTitles ()
 
     while (t <= 110)
         {
-        txClear ();
+        txBegin ();
         txSetFillColor (TX_BLACK);
+        txClear ();
         txSetColor     (TX_WHITE);
         txSelectFont   ("Ariel", 150);
         txTextOut      (w + 100 - t * 25, 160, "Юра, мы ничего не забыли!");
 
         txSleep (100);
+        txEnd ();
         t++;
         }
     txSelectFont ("Ariel", 60);
