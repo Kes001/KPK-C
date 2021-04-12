@@ -1,3 +1,16 @@
+//{=========================================================================== 
+//! @file       Protsenko_Konstantin_Mult.cpp
+//!
+//! @brief      Мультфильм посвященный 60-летию полета в космос.
+//!
+//!             Пример создания мультфильма с помощью TXLib.
+//!             КПК по С++ от МФТИ.
+//!
+//!             $Date: 2021-04-12 $
+//!             $Copyright: (C) Kes001 (Проценко Константин Сергеевич) <procenkok@yandex.ru> $
+//          (C) Проценко Константин, г.Магнитогорск, 2021
+//}===========================================================================
+
 #include "TXLib.h"
 #include <cstdlib>
 
@@ -58,11 +71,11 @@ void drawStartTitles ()
         txSetFillColor (TX_BLACK);
         txSetColor     (TX_WHITE);
         txSelectFont   ("TimesNewRoman", 150);
-        txTextOut      (w + 200 - t * 13, 100, "Ïîñâÿùàåòñÿ");
+        txTextOut      (w + 200 - t * 13, 100, "Посвящается");
 
         txSetColor     (TX_WHITE);
         txSelectFont   ("Ariel", 130);
-        txTextOut      (w + 500 - t * 17, 250, "Äíþ êîñìîíàâòèêè");
+        txTextOut      (w + 500 - t * 17, 250, "Дню космонавтики");
 
         txSleep (100);
         t++;
@@ -106,7 +119,7 @@ void drawEpisode1 ()
 
     txSetColor     (TX_WHITE);
     txSelectFont   ("Ariel", 50);
-    txTextOut      (200, 350, "Àáðà - êàäàáðà");
+    txTextOut      (200, 350, "Абра - кадабра");
     txSleep        (2000);
 
     drawBackground ();
@@ -126,7 +139,7 @@ void drawEpisode1 ()
 
     txSetColor     (TX_WHITE);
     txSelectFont   ("Ariel", 50);
-    txTextOut      (200, 350, "×òî-òî íå òî íàòâîðèë ...");
+    txTextOut      (200, 350, "Что-то не то натворил ...");
 
     txSleep        (2000);
 
@@ -244,7 +257,7 @@ void drawEpisode3 ()
 
     txSetColor   (TX_WHITE);
     txSelectFont ("Comic Sans MS", 60, 30, true, true, false, false, 15);
-    txTextOut    (100, 300, "ÎÑÒÀÍÀÂÈÒÅÑÜ!!!");
+    txTextOut    (100, 300, "ОСТАНАВИТЕСЬ!!!");
     txSleep (1000);
 
     t = 0;
@@ -264,7 +277,7 @@ void drawEpisode3 ()
             {
             txSetColor     (TX_WHITE);
             txSelectFont   ("Ariel", 50);
-            txTextOut      (20, 300, "Âîò îíî - íàñòîÿùåå ÷óäî!");
+            txTextOut      (20, 300, "Вот оно - настоящее чудо!");
             }
 
         txSleep    (100);
@@ -491,13 +504,13 @@ void drawEndTitles ()
         txSetFillColor (TX_BLACK);
         txSetColor     (TX_WHITE);
         txSelectFont   ("Ariel", 150);
-        txTextOut      (w + 100 - t * 25, 160, "Þðà, ìû íè÷åãî íå çàáûëè!");
+        txTextOut      (w + 100 - t * 25, 160, "Юра, мы ничего не забыли!");
 
         txSleep (100);
         t++;
         }
     txSelectFont ("Ariel", 60);
-    txTextOut    (50, 300, "Âûïîëíèë: Ïðîöåíêî Êîíñòàíòèí Ñåðãååâè÷");
-    txTextOut    (200, 500, "ã. Ìàãíèòîãîðñê, 2021 ãîä");
+    txTextOut    (50, 300, "Выполнил: Проценко Константин Сергеевич");
+    txTextOut    (200, 500, "г. Магнитогорск, 2021 год");
     txSleep      (3000);
     }
