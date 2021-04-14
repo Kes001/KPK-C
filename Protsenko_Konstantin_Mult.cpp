@@ -1,14 +1,13 @@
-//{=========================================================================== 
+//{===========================================================================
 //! @file       Protsenko_Konstantin_Mult.cpp
 //!
-//! @brief      Мультфильм посвященный 60-летию полета в космос.
+//! @brief      Cartoon dedicated to the 60th anniversary of space flight.
 //!
-//!             Пример создания мультфильма с помощью TXLib.
-//!             КПК по С++ от МФТИ.
+//!             KPK C++
 //!
 //!             $Date: 2021-04-12 $
-//!             $Copyright: (C) Kes001 (Проценко Константин Сергеевич) <procenkok@yandex.ru> $
-//          (C) Проценко Константин, г.Магнитогорск, 2021
+//!             $Copyright: (C) Kes001 (Protsenko Konstantin) <procenkok@yandex.ru> $
+//          (C) Protsenko Konstantin, Magnitogorsk, 2021
 //}===========================================================================
 
 #include "TXLib.h"
@@ -16,8 +15,9 @@
 
 //-----------------------------------------------------------------------------
 
-int w = 1100;
-int h = 600;
+const int SCR_WIDTH  = 1100;
+const int SCR_HEIGTH =  600;
+const double DELAY   =    2;
 
 void drawBackground  ();
 void drawSky         (int x, int y);
@@ -43,7 +43,7 @@ void drawMan         (int x, int y, double sizeX, double sizeY, COLORREF skin_co
                       double eyes  = 2);
 void drawLightning   (int x,  int y,  double sizeX, double sizeY, COLORREF light_color);
 void drawRoof        (int x1, int x2, int y, COLORREF roof_color);
-void drawWindows     (int x1, int y1, int x2, int y2,  int count);
+void drawWindows     (int x1, int y1, int x2, int y2, int count);
 void drawSun         (int x,  int y, int r, int eyes, double koso = 0, int tang = 0);
 void drawCloud       (int x,  int y, int r);
 void drawPuddle      (int t,  int size);
@@ -52,7 +52,7 @@ void drawPuddle      (int t,  int size);
 
 int main()
     {
-    txCreateWindow (w, h);
+    txCreateWindow (SCR_WIDTH, SCR_HEIGTH);
 
     drawStartTitles ();
 
@@ -78,16 +78,17 @@ void drawStartTitles ()
         txSetFillColor (TX_BLACK);
         txSetColor     (TX_WHITE);
         txSelectFont   ("TimesNewRoman", 150);
-        txTextOut      (w + 200 - t * 13, 100, "Посвящается");
+        txTextOut      (SCR_WIDTH + 200 - t * 15, 100, "Posvyashchaetsya");
 
         txSetColor     (TX_WHITE);
-        txSelectFont   ("Ariel", 130);
-        txTextOut      (w + 500 - t * 17, 250, "Дню космонавтики");
+        txSelectFont   ("Arial", 130);
+        txTextOut      (SCR_WIDTH + 500 - t * 18, 250, "Dnyu kosmonavtiki");
 
-        txSleep (100);
+        txSleep (100*DELAY);
         txEnd ();
         t++;
         }
+    txSleep (300*DELAY);
     }
 
 //-----------------------------------------------------------------------------
@@ -104,7 +105,7 @@ void drawSky      (int x, int y)
     txSetFillColor (RGB (0, 0, 128));
     txSetColor     (RGB (0, 0, 128));
 
-    txRectangle    (x, y, x + w, y + h);
+    txRectangle    (x, y, x + SCR_WIDTH, y + SCR_HEIGTH);
     }
 
 //-----------------------------------------------------------------------------
@@ -114,14 +115,14 @@ void drawGround   (int x, int y)
     txSetFillColor (RGB (185, 122, 85));
     txSetColor     (RGB (185, 122, 85));
 
-    txRectangle    (x, y, x + w, y + h);
+    txRectangle    (x, y, x + SCR_WIDTH, y + SCR_HEIGTH);
 
     txSetColor     (RGB (255, 255, 255), 3);
     int step = 0;
     for (int i = 1; i <= 10; i++)
         {
-        txLine (x + step, y + (h - y)/2, x + step + (w - x)/10, y + (h - y)/2);
-        step += x + (w - x)/5;
+        txLine (x + step, y + (SCR_HEIGTH - y)/2, x + step + (SCR_WIDTH - x)/10, y + (SCR_HEIGTH - y)/2);
+        step += x + (SCR_WIDTH - x)/5;
         }
     }
 
@@ -133,9 +134,9 @@ void drawEpisode1 ()
     drawMan        (200, 550, 80, 170, TX_YELLOW, 0.2, 0, 0.2, 0.5, 2);
 
     txSetColor     (TX_WHITE);
-    txSelectFont   ("Ariel", 50);
-    txTextOut      (200, 350, "Абра - кадабра");
-    txSleep        (2000);
+    txSelectFont   ("Arial", 50);
+    txTextOut      (200, 350, "Abra-cadabra!");
+    txSleep        (2000*DELAY);
 
     drawBackground ();
     drawMan        (200, 550, 80, 170, TX_YELLOW, 0.2, 0, 0.2, 0.5, 2);
@@ -143,7 +144,7 @@ void drawEpisode1 ()
     for (int x = 100; x <= 800; x += 150)
         {
         drawCloud (x, x%100 + 50, 50 + x/10%10);
-        txSleep   (1000);
+        txSleep   (1000*DELAY);
 
         if (x >= 250 and x < 700)
             {
@@ -153,17 +154,17 @@ void drawEpisode1 ()
         }
 
     txSetColor     (TX_WHITE);
-    txSelectFont   ("Ariel", 50);
-    txTextOut      (200, 350, "Что-то не то натворил ...");
+    txSelectFont   ("Arial", 50);
+    txTextOut      (200, 350, " Ups ...");
 
-    txSleep        (2000);
+    txSleep        (2000*DELAY);
 
     int t = 0;
     while (t < 200)
         {
         drawBackground ();
 
-        for (int i = 1; i <= w/100; i++)
+        for (int i = 1; i <= SCR_WIDTH/100; i++)
             {
             drawCloud (i*150 - 100, 20 + rand()%50, 50 - t%20);
             }
@@ -178,20 +179,20 @@ void drawEpisode1 ()
 
 //-----------------------------------------------------------------------------
 
-void drawRain     (int x, int y, int sizeY)
+void drawRain     (int x0, int y0, int sizeY)
     {
-    int tr = 1;
+    int t = 1;
 
-    while (tr < 15)
+    while (t < 15)
         {
-        for (int ix = x; ix <= w; ix += 15)
+        for (int x = x0; x <= SCR_WIDTH; x += 15)
             {
             txSetColor (TX_WHITE);
-            txLine     (ix, tr*50 + ix%2*20 + y, ix, tr*50 + ix%2*20 + y + sizeY);
+            txLine     (x, t*50 + x%2*20 + y0, x, t*50 + x%2*20 + y0 + sizeY);
             }
 
-        txSleep(5);
-        tr++;
+        txSleep (5*DELAY);
+        t++;
         }
     }
 
@@ -202,9 +203,9 @@ void drawPuddle   (int t, int size)
     txSetFillColor (RGB (150, 210, 235));
     txSetColor     (RGB (150, 210, 235));
 
-    txEllipse (w - 150, h - 50, w - 150 + size + t/2, h - 50 + size/2 + t/4);
-    txEllipse (w - 450, h - 30, w - 450 + size + t/2, h - 50 + size/2 + t/4);
-    txEllipse (w - 750, h - 60, w - 550 + size + t/2, h - 50 + size/2 + t/4);
+    txEllipse (SCR_WIDTH - 150, SCR_HEIGTH - 50, SCR_WIDTH - 150 + size + t/2, SCR_HEIGTH - 50 + size/2 + t/4);
+    txEllipse (SCR_WIDTH - 450, SCR_HEIGTH - 30, SCR_WIDTH - 450 + size + t/2, SCR_HEIGTH - 50 + size/2 + t/4);
+    txEllipse (SCR_WIDTH - 750, SCR_HEIGTH - 60, SCR_WIDTH - 550 + size + t/2, SCR_HEIGTH - 50 + size/2 + t/4);
     }
 
 //-----------------------------------------------------------------------------
@@ -219,16 +220,16 @@ void drawEpisode2 ()
         drawSun    (880, 90, t, t%10 + 10, t%5, t%10 + 5);
         drawPuddle (-2*t, 100);
 
-        txSleep    (100);
+        txSleep    (100*DELAY);
         t++;
         }
 
     drawHouse (840, 280, 1.8, 1.3, TX_BLACK,    10, 10, 3,  10);
-    txSleep   (800);
+    txSleep   (800*DELAY);
     drawHouse (540, 300, 1.3, 1.2, TX_DARKGRAY, 20, -5, 1, -50);
-    txSleep   (700);
+    txSleep   (700*DELAY);
     drawHouse (240, 340, 1,   1,   TX_MAGENTA,  30, 25, 2,  10);
-    txSleep   (600);
+    txSleep   (600*DELAY);
 
     t = 0;
     while (t < 100)
@@ -240,7 +241,7 @@ void drawEpisode2 ()
         drawSun        (880, 90, 60, t%10 + 10, t%5, t%10 + 5);
 
         t += 3;
-        txSleep (100);
+        txSleep (100*DELAY);
         }
     }
 
@@ -268,7 +269,7 @@ void drawEpisode3 ()
         drawCar (900 - t, 425, 100, 100, TX_ORANGE, t%50, t%4/10.0, t%3/10.0, t%100/10 + 2);
         drawCar (500 - t, 425, 100, 100, TX_RED,    t%40,    0.1, (t%3)/10.0, t%100/10 + 3);
 
-        txSleep (100);
+        txSleep (100*DELAY);
         t += 5;
         }
 
@@ -282,8 +283,8 @@ void drawEpisode3 ()
 
     txSetColor   (TX_WHITE);
     txSelectFont ("Comic Sans MS", 60, 30, true, true, false, false, 15);
-    txTextOut    (100, 300, "ОСТАНАВИТЕСЬ!!!");
-    txSleep (1000);
+    txTextOut    (100, 300, "OSTANAVITES'!!!");
+    txSleep (1000*DELAY);
 
     t = 0;
     while (t < 500)
@@ -301,11 +302,11 @@ void drawEpisode3 ()
         if (t > 300)
             {
             txSetColor     (TX_WHITE);
-            txSelectFont   ("Ariel", 50);
-            txTextOut      (20, 300, "Вот оно - настоящее чудо!");
+            txSelectFont   ("Arial", 50);
+            txTextOut      (20, 300, "This's a real miracle!");
             }
 
-        txSleep    (100);
+        txSleep    (100*DELAY);
         t += 5;
         }
     }
@@ -321,7 +322,7 @@ void drawRocket   (int x, int y, double sizeX, double sizeY, COLORREF rocket_col
     txSetColor     (TX_RED);
     txCircle       (x + 75*sizeX, y + 75*sizeY - t, 50*sizeX);
 
-    txSelectFont   ("Ariel", 30);
+    txSelectFont   ("Arial", 30);
     txTextOut      (x + 30*sizeX, y + 150*sizeY - t, "CCCP");
 
     POINT trio[] = {{ROUND(x), ROUND(y - t)},{ROUND(x +  75*sizeX), ROUND(y - 100*sizeY - t)},
@@ -390,32 +391,35 @@ void drawSun      (int x, int y, int r, int eyes, double koso, int tong)
 
 //-----------------------------------------------------------------------------
 
-void drawRoof     (int x1, int x2, int y, COLORREF roof_color)
+void drawRoof     (int x0, int x1, int y, COLORREF roof_color)
     {
     txSetColor (roof_color, 10);
 
-    txLine (x1, y, x1 + (x2 - x1)/2, y - 0.5 * (x2 - x1));
-    txLine (x1 + (x2 - x1)/2, y - 0.5 * (x2 - x1), x2, y);
+    txLine (x0, y, x0 + (x1 - x0)/2, y - 0.5 * (x1 - x0));
+    txLine (x0 + (x1 - x0)/2, y - 0.5 * (x1 - x0), x1, y);
     }
 
 //-----------------------------------------------------------------------------
 
-void drawWindows  (int x1, int y1, int x2, int y2, int count)
+void drawWindows  (int x0, int y0, int x1, int y1, int count)
     {
     txSetColor     (RGB (255, 255, 255), 2);
 
-    int d = 10;
-    int d2 = 10;
+    int size_width = 10;
+    int size_height = 10;
     for (int i = 1; i <= count; i++)
         {
         for (int j = 1; j <= 5; j++)
             {
             txSetFillColor (RGB (255, 240, rand()%200));
-            txRectangle    (x1 + d, y1 + d2, x1 + d + (x2 - x1)/10, y1 + d2 + (y2 - y1)/10);
-            d += (x2 - x1)/5;
+            txRectangle    (x0 + size_width,
+                            y0 + size_height,
+                            x0 + size_width  + (x1 - x0)/10,
+                            y0 + size_height + (y1 - y0)/10);
+            size_width += (x1 - x0)/5;
             }
-        d = 10;
-        d2 += (y2 - y1)/6;
+        size_width = 10;
+        size_height += (y1 - y0)/6;
         }
     }
 
@@ -549,15 +553,16 @@ void drawEndTitles ()
         txSetFillColor (TX_BLACK);
         txClear ();
         txSetColor     (TX_WHITE);
-        txSelectFont   ("Ariel", 150);
-        txTextOut      (w + 100 - t * 25, 160, "Юра, мы ничего не забыли!");
+        txSelectFont   ("Arial", 150);
+        txTextOut      (SCR_WIDTH + 100 - t * 25, 160, "YURA, my nichego ne zabyli!");
 
-        txSleep (100);
+        txSleep (100*DELAY);
         txEnd ();
         t++;
         }
-    txSelectFont ("Ariel", 60);
-    txTextOut    (50, 300, "Выполнил: Проценко Константин Сергеевич");
-    txTextOut    (200, 500, "г. Магнитогорск, 2021 год");
-    txSleep      (3000);
+    txSelectFont ("Arial", 60);
+    txTextOut    (350, 150, "CREATED BY:");
+    txTextOut    (280, 300, "Protsenko Konstantin");
+    txTextOut    (300, 500, "Magnitogorsk 2021");
+    txSleep      (3000*DELAY);
     }
