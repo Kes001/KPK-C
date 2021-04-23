@@ -26,11 +26,11 @@ int main()
     {
     txCreateWindow (SCR_WIDTH, SCR_HEIGTH);
 
-    //drawStartTitles ();
+    drawStartTitles ();
 
-    drawEpisode1 ();
-    drawEpisode2 ();
-    drawEpisode3 ();
+    drawEpisode1    ();
+    drawEpisode2    ();
+    drawEpisode3    ();
 
     drawEndTitles   ();
 
