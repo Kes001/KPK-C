@@ -72,8 +72,8 @@ namespace Konstantin
 
     void drawBackground  ()
         {
-        drawSky    ( 0,   0);
-        drawGround ( 0, 540);
+        drawSky    (0,   0);
+        drawGround (0, 540);
         }
     //-----------------------------------------------------------------------------
 
