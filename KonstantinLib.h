@@ -24,7 +24,7 @@ namespace Konstantin
     void drawGround      (int x, int y);
     void drawHouses      (int t = 0);
     void drawRocket      (int x, int y, double sizeX, double sizeY, COLORREF rocket_color, int t);
-    void drawRain        (int x, int y, int sizeY = 10);
+    void drawRain        (int x0, int y0, int sizeY = 10);
     void drawHouse       (int x, int y, double sizeX, double sizeY, COLORREF house_color,
                           int roof_h  = 0, int roof_w = 0,
                           int windows = 3, int door   = 0);
