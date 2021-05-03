@@ -28,7 +28,7 @@ int main()
 
     //drawStartTitles ();
 
-    //drawEpisode1    ();
+    drawEpisode1    ();
     drawEpisode2    ();
     drawEpisode3    ();
 
@@ -105,7 +105,7 @@ void drawEpisode2 ()
         drawBackground ();
 
         drawSun    (880, 90, t, t%10 + 10, t%5, t%10 + 5);
-        drawPuddle (-2*t, 100);
+        drawPuddle (-2*t, 0);
 
         txSleep    (100*DELAY);
         t++;
