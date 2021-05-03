@@ -1,12 +1,12 @@
 //{===========================================================================
-//! @brief      Library for cartoon dedicated to the 60th anniversary of space flight.
+//! @brief      Библиотека функций для рисования мультфильма посвященного дню космонавтики.
 //!
-//!             KPK C++
+//!             В рамках КПК по С++ от МФТИ
 //!
-//!             $Date: 2021-04-23 $
-//!             $Copyright: (C) Kes001 (Protsenko Konstantin) <procenkok@yandex.ru> $
+//! @date       2021
+//! @par        Copyright: (C) Константин Проценко <procenkok@yandex.ru>
 //! @mainpage
-//!             - РјРѕР¶РµС‚ С‚Р°Рє:
+//!             - Функции для рисования элементов мультфильма:
 //!
 //!
 //!
