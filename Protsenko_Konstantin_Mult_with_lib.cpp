@@ -26,7 +26,7 @@ int main()
     {
     txCreateWindow (SCR_WIDTH, SCR_HEIGTH);
 
-    //drawStartTitles ();
+    drawStartTitles ();
 
     drawEpisode1    ();
     drawEpisode2    ();
@@ -105,7 +105,7 @@ void drawEpisode2 ()
         drawBackground ();
 
         drawSun    (880, 90, t, t%10 + 10, t%5, t%10 + 5);
-        drawPuddle (-2*t, 0);
+        drawPuddle (-2*t, 100);
 
         txSleep    (100*DELAY);
         t++;
