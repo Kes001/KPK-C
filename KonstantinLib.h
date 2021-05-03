@@ -7,10 +7,13 @@
 //! @par        Copyright: (C) Константин Проценко <procenkok@yandex.ru>
 //! @mainpage
 //!             Функции для рисования элементов мультфильма:
-//!             - автомобиль @ref drawCar (int x, int y, double sizeX, double sizeY, COLORREF car_color,
-//!                                        int janitor = 10, double window =  0,
-//!                                        double wheel = 0, double lights = 10);
-//!             @image html image/1.png
+//!             - @ref   drawCar (int x, int y, double sizeX, double sizeY, COLORREF car_color,
+//!                               int janitor = 10, double window =  0,
+//!                               double wheel = 0, double lights = 10);
+//!               @image html    car.png
+//!
+//!             - @ref   drawSun (int x,  int y, int r, int eyes, double koso = 0, int tang = 0);
+//!               @image html    sun.png
 //!
 //!
 //!
@@ -111,6 +114,8 @@ namespace Konstantin
     //! @code
     //!           drawSky (0, 0)
     //! @endcode
+    //!
+    //! @warning Рекомендуется использовать именно левый верхний угол для начала прорисовки неба.
     //}-----------------------------------------------------------------------------
 
     void drawSky      (int x, int y)
@@ -124,10 +129,18 @@ namespace Konstantin
     //{-----------------------------------------------------------------------------
     //! Рисует дорогу
     //!
-    //! На экране слева направо происходит движение текста
+    //! Внизу экрана рисуется коричневая дорога с белой разметкой
     //!
-    //! @note Текст является конкретным для данного мультфильма,
-    //!       сменить при необходимости
+    //! @param x  - координата начала рисования дороги по оси х
+    //! @param y  - координата начала рисования дороги по оси y
+    //!
+    //! @note     Дорога рисуется от левой верхней точки (х, у) до
+    //!           правой нижней точки (ширина и высота размера экрана)
+    //!
+    //! @par      Пример использования:
+    //! @code
+    //!           drawGround (0, 540);
+    //! @endcode
     //}-----------------------------------------------------------------------------
 
     void drawGround   (int x, int y)
