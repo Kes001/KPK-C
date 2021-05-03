@@ -1,13 +1,19 @@
 //{===========================================================================
-//! @file       KonstantinLib.h
-//!
 //! @brief      Library for cartoon dedicated to the 60th anniversary of space flight.
 //!
 //!             KPK C++
 //!
 //!             $Date: 2021-04-23 $
 //!             $Copyright: (C) Kes001 (Protsenko Konstantin) <procenkok@yandex.ru> $
-//          (C) Protsenko Konstantin, Magnitogorsk, 2021
+//! @mainpage
+//!             - Описание функций для рисования элементов мультфильма:
+//!
+//!
+//!
+//!
+//!
+//!
+//!
 //}===========================================================================
 
 #include "TXLib.h"
