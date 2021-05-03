@@ -6,7 +6,7 @@
 //!             $Date: 2021-04-23 $
 //!             $Copyright: (C) Kes001 (Protsenko Konstantin) <procenkok@yandex.ru> $
 //! @mainpage
-//!             - Функции:
+//!             - может так:
 //!
 //!
 //!
