@@ -26,13 +26,13 @@ int main()
     {
     txCreateWindow (SCR_WIDTH, SCR_HEIGTH);
 
-    drawStartTitles ();
+    //drawStartTitles ();
 
-    drawEpisode1    ();
-    drawEpisode2    ();
+    //drawEpisode1    ();
+    //drawEpisode2    ();
     drawEpisode3    ();
 
-    drawEndTitles   ();
+    //drawEndTitles   ();
 
     return 0;
     }
@@ -166,17 +166,17 @@ void drawEpisode3 ()
 
     txPlaySound ("sounds/rocket.wav");
     t = 0;
-    while (t < 500)
+    while (t < 300)
         {
         drawBackground ();
 
         drawRocket (150, 500,   0.7,   1, TX_WHITE, 2*t);
         drawGround (  0, 540);
-        drawHouses ();
+        //drawHouses ();
         drawSun    (880,  90,  60, t%10 + 10, t%5, t%10 + 5);
         drawCar    (650, 425, 100, 100, TX_ORANGE, t%50, 0,   -0.1, 7);
-        drawCar    (250, 425, 100, 100, TX_RED,    t%40, 0.1,  0.1, 5);
-        drawMan    (100, 550 - t%10,  80, 170, TX_YELLOW,  0.1  - t%2/10.0, 0 - t%2/10.0, -0.3, -0.1, 2 + t%3);
+        //drawCar    (250, 425, 100, 100, TX_RED,    t%40, 0.1,  0.1, 5);
+        //drawMan    (100, 550 - t%10,  80, 170, TX_YELLOW,  0.1  - t%2/10.0, 0 - t%2/10.0, -0.3, -0.1, 2 + t%3);
 
         if (t > 300)
             {

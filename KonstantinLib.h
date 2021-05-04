@@ -10,16 +10,27 @@
 //!             - @ref   drawCar (int x, int y, double sizeX, double sizeY, COLORREF car_color,
 //!                               int janitor = 10, double window =  0,
 //!                               double wheel = 0, double lights = 10);
-//!               @image html    car.png
+//!               @image html car.png
 //!
 //!             - @ref   drawSun (int x,  int y, int r, int eyes, double koso = 0, int tang = 0);
-//!               @image html    sun.png
+//!               @image html sun.png
 //!
 //!             - @ref   drawRain (int x0, int y0, int sizeY = 10);
-//!               @image html     rain.png
+//!               @image html rain.png
 //!
 //!             - @ref   drawPuddle (int t,  int size);
-//!               @image html        puddle.png
+//!               @image html puddle.png
+//!
+//!             - @ref   void drawHouse (int x, int y, double sizeX, double sizeY, COLORREF house_color,
+//!                                      int roof_h  = 0, int roof_w = 0,
+//!                                      int windows = 3, int door   = 0);
+//!               @image html house.png
+//!
+//!             - @ref   drawHouses (int t = 0);
+//!               @image html houses.png
+//!
+//!             - @ref   drawRocket (int x, int y, double sizeX, double sizeY, COLORREF rocket_color, int t);
+//!               @image html rocket.png
 //}===========================================================================
 
 #include "TXLib.h"
@@ -44,7 +55,9 @@ namespace Konstantin
                           int janitor = 10, double window =  0,
                           double wheel = 0, double lights = 10);
     void drawMan         (int x, int y, double sizeX, double sizeY, COLORREF skin_color,
-                          double rhand = 0, double lhand = 0,
+        void drawHouse       (int x, int y, double sizeX, double sizeY, COLORREF house_color,
+                          int roof_h  = 0, int roof_w = 0,
+                          int windows = 3, int door   = 0);                  double rhand = 0, double lhand = 0,
                           double legs  = 0, double jezl  = 0,
                           double eyes  = 2);
     void drawLightning   (int x,  int y,  double sizeX, double sizeY, COLORREF light_color);
@@ -57,7 +70,8 @@ namespace Konstantin
     //{-----------------------------------------------------------------------------
     //! Рисует стартовые титры
     //!
-    //! На экране слева направо происходит движение текста
+    //! На экране слева направо происходит движение текста,
+    //! скорость движения зависит от константы DELAY
     //!
     //! @note Текст является конкретным для данного мультфильма,
     //!       сменить при необходимости
@@ -229,7 +243,22 @@ namespace Konstantin
         txEllipse (SCR_WIDTH - 750, SCR_HEIGTH - 60, SCR_WIDTH - 550 + size + t/2, SCR_HEIGTH - 50 + size/2 + t/4);
         }
 
-    //-----------------------------------------------------------------------------
+    //{-----------------------------------------------------------------------------
+    //! Рисует дома
+    //!
+    //! Справа налево расставляется три домика
+    //!
+    //! @param t    - позволяет имитировать движение крыши, окон, двери
+    //!
+    //! @note        Дома рисуются в определенных местах на дороге
+    //!              При вызове функции происходит постоянное движение краев крыши,
+    //!              дабавление и уменьшение ряда окон, движение двери ввех и вниз
+    //!
+    //! @par         Пример использования:
+    //! @code
+    //!              drawHouses (t);
+    //! @endcode
+    //}-----------------------------------------------------------------------------
 
     void drawHouses   (int t)
         {
@@ -238,7 +267,26 @@ namespace Konstantin
         drawHouse (240, 340, 1,   1,   TX_MAGENTA,  30 + t%10, 25 + t%10, 2 + t%2, 10 + t%10);
         }
 
-    //-----------------------------------------------------------------------------
+    //{-----------------------------------------------------------------------------
+    //! Рисует ракету
+    //!
+    //! Рисеуется ракета с надписью и двумя соплами с выходящим из них огнем
+    //!
+    //! @param x            - координата левого нижнего угла треугольника носа ракеты по оси х
+    //! @param y            - координата левого нижнего угла треугольника носа ракеты по оси у
+    //! @param sizeX        - регулирует размер ракеты по ширине
+    //! @param sizeY        - регулирует размер ракеты по высоте
+    //! @param rocket_color - позволяет задавать цвет ракеты
+    //! @param t            - позволяет задавать скорость полета ракеты вверх
+    //!
+    //! @note        Ракета рисуется от левого нижнего угла теугольника носа ракеты
+    //!              из ракеты выходит огонь красно-оранжевого цвета
+    //!
+    //! @par         Пример использования:
+    //! @code
+    //!              drawRocket (150, 500, 0.7, 1, TX_WHITE, 2*t);
+    //! @endcode
+    //}-----------------------------------------------------------------------------
 
     void drawRocket   (int x, int y, double sizeX, double sizeY, COLORREF rocket_color, int t)
         {

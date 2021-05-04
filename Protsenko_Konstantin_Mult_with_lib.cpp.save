@@ -28,11 +28,11 @@ int main()
 
     //drawStartTitles ();
 
-    drawEpisode1    ();
+    //drawEpisode1    ();
     drawEpisode2    ();
     drawEpisode3    ();
 
-    drawEndTitles   ();
+    //drawEndTitles   ();
 
     return 0;
     }
