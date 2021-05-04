@@ -11,7 +11,7 @@ var searchData=
   ['drawhouse_40',['drawHouse',['../namespace_konstantin.html#a36aaa4ee187e5a04bcc9046aad28d1b1',1,'Konstantin']]],
   ['drawhouses_41',['drawHouses',['../namespace_konstantin.html#a963b089b710bbaff183789382131e283',1,'Konstantin']]],
   ['drawlightning_42',['drawLightning',['../namespace_konstantin.html#ab7618c38b77b03690bc31b3d10f95d70',1,'Konstantin']]],
-  ['drawman_43',['drawMan',['../namespace_konstantin.html#a404efe041c3043166987d8d2cb39f2c4',1,'Konstantin::drawMan(int x, int y, double sizeX, double sizeY, COLORREF skin_color, void drawHouse(int x, int y, double sizeX, double sizeY, COLORREF house_color, int roof_h=0, int roof_w=0, int windows=3, int door=0);double rhand=0, double lhand=0, double legs=0, double jezl=0, double eyes=2)'],['../namespace_konstantin.html#a0b624fedda121c60de9de7dffec34280',1,'Konstantin::drawMan(int x, int y, double sizeX, double sizeY, COLORREF skin_color, double rhand, double lhand, double legs, double jezl, double eyes)']]],
+  ['drawman_43',['drawMan',['../namespace_konstantin.html#a809367d472494f8cdae384e4b4ac0c86',1,'Konstantin']]],
   ['drawpuddle_44',['drawPuddle',['../namespace_konstantin.html#a1a6436e3efc50a6c1976fad5d38bc08d',1,'Konstantin']]],
   ['drawrain_45',['drawRain',['../namespace_konstantin.html#a39c99ed70bedb2b069d402eea7bee721',1,'Konstantin']]],
   ['drawrocket_46',['drawRocket',['../namespace_konstantin.html#a81ede75ab7fd3ef9e91320692d78569a',1,'Konstantin']]],
