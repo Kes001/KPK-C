@@ -32,7 +32,7 @@ DOXYFILE_ENCODING      = UTF-8
 # title of most generated pages and in a few other places.
 # The default value is: My Project.
 
-PROJECT_NAME           = Mult
+PROJECT_NAME           = Mult_Kosmonavtika
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. This
 # could be handy for archiving the generated documentation or if some version
@@ -864,8 +864,7 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  =  \
-                         C:\Users\KES\Documents\GitHub\KPK-C\config.h \
+INPUT                  = C:\Users\KES\Documents\GitHub\KPK-C\config.h \
                          C:\Users\KES\Documents\GitHub\KPK-C\KonstantinLib.h \
                          C:\Users\KES\Documents\GitHub\KPK-C\Protsenko_Konstantin_Mult_with_lib.cpp
 
