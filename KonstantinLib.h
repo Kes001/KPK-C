@@ -7,38 +7,31 @@
 //! @par        Copyright: (C) Константин Проценко <procenkok@yandex.ru>
 //! @mainpage
 //!             Функции для рисования элементов мультфильма:
-//!             - @ref   drawCar (int x, int y, double sizeX, double sizeY, COLORREF car_color,
-//!                               int janitor = 10, double window =  0,
-//!                               double wheel = 0, double lights = 10);
+//!             - @ref   drawCar();
 //!               @image html car.png
 //!
-//!             - @ref   drawSun (int x,  int y, int r, int eyes, double koso = 0, int tang = 0);
+//!             - @ref   drawSun();
 //!               @image html sun.png
 //!
-//!             - @ref   drawRain (int x0, int y0, int sizeY = 10);
+//!             - @ref   drawRain();
 //!               @image html rain.png
 //!
-//!             - @ref   drawPuddle (int t,  int size);
+//!             - @ref   drawPuddle();
 //!               @image html puddle.png
 //!
-//!             - @ref   void drawHouse (int x, int y, double sizeX, double sizeY, COLORREF house_color,
-//!                                      int roof_h  = 0, int roof_w = 0,
-//!                                      int windows = 3, int door   = 0);
+//!             - @ref   drawHouse();
 //!               @image html house.png
 //!
-//!             - @ref   drawHouses (int t = 0);
+//!             - @ref   drawHouses();
 //!               @image html houses.png
 //!
-//!             - @ref   drawRocket (int x, int y, double sizeX, double sizeY, COLORREF rocket_color, int t);
+//!             - @ref   drawRocket();
 //!               @image html rocket.png
 //!
-//!             - @ref   void drawCloud (int x, int y, int r);
+//!             - @ref   drawCloud();
 //!               @image html cloud.png
 //!
-//!             - @ref   void void drawMan (int x, int y, double sizeX, double sizeY, COLORREF skin_color,
-//!                                         double rhand = 0, double lhand = 0,
-//!                                         double legs  = 0, double jezl  = 0,
-//!                                         double eyes  = 2);
+//!             - @ref   drawMan();
 //!               @image html man.png
 //}===========================================================================
 
