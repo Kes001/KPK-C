@@ -31,7 +31,7 @@
 //!             - @ref   drawCloud();
 //!               @image html cloud.png
 //!
-//!             - @ref   drawMan();
+//!             - @ref   drawMan( );
 //!               @image html man.png
 //}===========================================================================
 
@@ -294,7 +294,7 @@ namespace Konstantin
         {
         txSetFillColor (rocket_color);
         txSetColor (rocket_color);
-        txRectangle (150, y - t, ROUND (x + 150 * sizeX), ROUND (y + 200 * sizeY - t));
+        txRectangle (x, y - t, ROUND (x + 150 * sizeX), ROUND (y + 200 * sizeY - t));
 
         txSetColor (TX_RED);
         txCircle (x + 75 * sizeX, y + 75 * sizeY - t, 50 * sizeX);
