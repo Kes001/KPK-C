@@ -690,8 +690,8 @@ namespace Konstantin
 
         txCircle (x, y - sizeY + 0.3 * sizeX, 0.3 * sizeX);
 
-        txSetFillColor (TX_GREEN);
-        txSetColor (TX_GREEN);
+        txSetFillColor (TX_BLUE);
+        txSetColor (TX_BLUE);
         txCircle (x - sizeX / 7, y - sizeY / 1.2, 2 + eyes);
         txCircle (x + sizeX / 7, y - sizeY / 1.2, 2 + eyes);
 
