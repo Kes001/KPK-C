@@ -78,7 +78,6 @@ int main ()
         SemerkaDraw  (0 + t*5, 570);
         MoskvichDraw (600, 400, -30 - t/5, 0, 0, (t/10)%2, 1);
 
-        golova *= -1;
         txSleep (10);
         txEnd   ();
         }
