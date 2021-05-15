@@ -3,6 +3,24 @@
 //!
 //!         Library of functions for creating cartoons
 //!
+//! @mainpage
+//!     DerMeisterLib.h - библиотека функций, реализованная с помощью TXLib.h.
+//!     Данная библиотека писалась с огромной любовью для создания мультипликационного фильма.
+//!
+//!     Основными объектами библиотеки являются:
+//!     @image html     Objects.jpg
+//!
+//!     Пример рисования статичных объектов с помощью функций из DerMeisterLib.h
+//!     @image html     Primer1.gif
+//!
+//!     Пример рисования динамичных объектов с помощью функций из DerMeisterLib.h
+//!     @image html     Primer2.gif
+//!
+//---------------------------------------------------------
+//! @defgroup Geroi         Главные герои
+//! @defgroup VtoroiPlan    Второстепенные герои
+//! @defgroup Auto          Транспорт
+//! @defgroup Fon           Фоновые объекты
 //      (c) Romanovskaia Anna Aleksandrovna, g. Omsk, 2021
 //}========================================================
 
@@ -21,49 +39,52 @@ const COLORREF TX_PURPLE    = RGB (186,  85, 211),
                TX_SAND      = RGB (238, 232, 170),
                TX_SEAGREEN  = RGB ( 32, 178, 170);
 
-void Background      ();
-void BackgroundSize  ();
-void SolncaSvet      (int time);
-void Obloka          (int time);
-void ZadniiPlan      (int time);
-void Lesopolosa      (int time);
-void LesopolosaSize  (int time);
-void BackgroundBeach (int Volny);
-void SemerkaDraw     (int x, int y);
-void MnogoTravi      (int y, int time);
-void RazmetkaDraw    (int y, int time);
-void JuravleiKosyak  (int x, int y, int time);
-void BackgroundMore  (int x, int y, int Volny);
-void OstanovkaDraw   (int x, int y, double Size);
-void MisterZadDraw   (int x, int y, double Size);
-void Serdechko       (int x, int y, double Size);
-void SolnceDraw      (int x, int y, int DlinaLucha);
-void Trava           (int x, int y, int Veter, double Size);
-void JuravlDraw      (int x, int y, double Size, int Krilya);
-void Rybak           (int x, int y, int Udochka, double Size);
-void OblakoDraw      (int x, int y, double SizeX, double SizeY);
-void DerevoDraw      (int x, int y, double Size, int Otragenie);
-void MisterBokDraw   (int x, int y, int UpNogaL, int UpNogaP, double Size);
-void CvetokDraw      (int x, int y, double Size, COLORREF centr, COLORREF lepestki);
-void CatZadDraw      (int x, int y, double Size, int Us1, int Us2, int Us3, int Hvost);
-void MadamZadDraw    (int x, int y, int UpRukaL, int UpRukaP, int UpNogaL, int UpNogaP,
-                      double Size);
-void MoskvichDraw    (int x, int y, int KapotUp, int OknoDown, int Antena,
-                      int Avariika,  double Size);
-void CatDraw         (int x, int y, double Size, int Us1, int Us2, int Us3,
-                      int Hvost, int Lapki, int Stop);
-void MisterDraw      (int x, int y, int Glaza, COLORREF Zrachki, int Rot,
-                      int UpRukaL, int UpRukaP, double Size);
-void BusLDraw        (int x, int y, int Zajiganie, COLORREF Stop, int Podveska,
-                      int Kolesa, int Glushitel, double Size);
-void MadamBokDraw    (int x, int y, int UpRukaL, int UpRukaP, int UpNogaL,
-                      int UpNogaP, double Size, int Otragenie);
-void BusRDraw        (int x, int y, int Zajiganie, COLORREF Stop, int Podveska,
-                      int Kolesa, int Glushitel, double Size, int DveriDown,
-                      int DveriSide);
-void MadamDraw       (int x, int y, int Glaza, COLORREF Zrachki, int Rot,
-                      int UpRukaL, int UpRukaP, int UpNogaL, int UpNogaP,
-                      int Naushniki, int Telephon, double Size);
+void Background       ();
+void BackgroundSize   ();
+void SolncaSvet       (int time);
+void Oblaka           (int time);
+void ZadniiPlan       (int time);
+void Lesopolosa       (int time);
+void LesopolosaSize   (int time);
+void BackgroundBeach  (int Volny);
+void SemerkaDraw      (int x, int y);
+void MnogoTravi       (int y, int time);
+void RazmetkaDraw     (int y, int time);
+void JuravleiKosyak   (int x, int y, int time);
+void BackgroundMore   (int x, int y, int Volny);
+void OstanovkaDraw    (int x, int y, double Size);
+void Serdechko        (int x, int y, double Size);
+void SolnceDraw       (int x, int y, int DlinaLucha);
+void Trava            (int x, int y, int Veter, double Size);
+void JuravlDraw       (int x, int y, double Size, int Krilya);
+void Rybak            (int x, int y, int Udochka, double Size);
+void OblakoDraw       (int x, int y, double SizeX, double SizeY);
+void DerevoDraw       (int x, int y, double Size, int Storona);
+void CvetokDraw       (int x, int y, double Size, COLORREF centr, COLORREF lepestki);
+void MoskvichDraw     (int x, int y, int KapotUp, int OknoDown, int Antena,
+                       int Avariika,  double Size);
+void CatDraw          (int x, int y, double Size, int Us1, int Us2, int Us3,
+                       int Hvost, int Lapki, int Stop);
+void CatZadDraw       (int x, int y, double Size, int Us1, int Us2, int Us3, int Hvost);
+void BusLDraw         (int x, int y, int Zajiganie, COLORREF Stop, int Podveska,
+                       int Kolesa, int Glushitel, double Size);
+void BusRDraw         (int x, int y, int Zajiganie, COLORREF Stop, int Podveska,
+                       int Kolesa, int Glushitel, double Size, int DveriDown,
+                       int DveriSide);
+void MadamDraw        (int x, int y, int Anfas, int StoitNaNogah, int Glaza, COLORREF Zrachki,
+                       int Rot, int UpRukaL, int UpRukaP, int UpNogaL, int UpNogaP, int Naushniki,
+                       int Telephon, double Size);
+void MadamDrawProfil  (int x, int y, COLORREF Zrachki, int UpRukaL, int UpRukaP, int UpNogaL,
+                       int UpNogaP, double Size, int Storona);
+void MisterDraw       (int x, int y, int Anfas, int Glaza, COLORREF Zrachki, int Rot,
+                       int UpRukaL, int UpRukaP, int UpNogaL, int UpNogaP, double Size);
+void MisterDrawProfil (int x, int y, COLORREF Zrachki, int UpNogaL, int UpNogaP, double Size, int Storona);
+
+//{------------------------------------------------------------------------------------------------------
+//! @ingroup Fon
+//!
+//! Рисует небо, поле и дорожное полотно
+//}------------------------------------------------------------------------------------------------------
 
 void Background ()
     {
@@ -90,6 +111,12 @@ void Background ()
     txRectangle (0, 641, 1400, 645);
     }
 
+//{------------------------------------------------------------------------------------------------------
+//! @ingroup Fon
+//!
+//! Рисует поле и дорожное полотно
+//}------------------------------------------------------------------------------------------------------
+
 void BackgroundSize ()
     {
     txSetColor (TX_MYGREEN);
@@ -112,19 +139,27 @@ void BackgroundSize ()
     }
 
 //{------------------------------------------------------------------------------------------------------
-//!Р РёСЃСѓРµС‚ СЃРІРµС‚СЏС‰РµРµ СЃРѕР»РЅС†Рµ
+//! @ingroup Fon
 //!
-//! @param time     РџРѕРєР°Р·Р°С‚РµР»СЊ РІСЂРµРјРµРЅРё, РѕС‚ РєРѕС‚РѕСЂРѕРіРѕ Р·Р°РІРёСЃРёС‚ РґР»РёРЅР° Р»СѓС‡РµР№
+//! Рисует солнышко, которое освещает мир своими лучиками))
 //!
-//! @par            РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ:
+//! @param time     Показатель времени, от которого зависит длина лучей
 //!
-//! @code           if ((time / 40) % 2 < 1)
-//!                     {
-//!                     SolnceDraw (1300, 80, 1 + time % 40);
-//!                     }
+//! @par            Пример использования:
+//!
+//! @code
+//! for (int time = 0; time <= 240; time++)
+//!     {
+//!     txSetFillColor (TX_WHITE);
+//!     txClear ();
+//!
+//!     SolncaSvet (time);
+//!
+//!     txSleep (1);
+//!      }
 //! @endcode
 //!
-//! @note           Р”Р»РёРЅР° Р»СѓС‡РµР№ Р±СѓРґРµС‚ СѓРІРµР»РёС‡РёРІР°С‚СЊСЃСЏ РЅР° 1 РєР°Р¶РґС‹Рµ 40 РєР°РґСЂРѕРІ
+//! @note           Длина лучей будет увеличиваться на 1 каждые 40 кадров
 //}------------------------------------------------------------------------------------------------------
 
 void SolncaSvet (int time)
@@ -139,7 +174,31 @@ void SolncaSvet (int time)
         }
     }
 
-void Obloka (int time)
+//{------------------------------------------------------------------------------------------------------
+//! @ingroup Fon
+//!
+//! Рисует облака
+//!
+//! @param time     Показатель времени, от которого зависит положение облаков
+//!
+//! @par            Пример использования:
+//!
+//! @see    Background (); BackgroundBeach (); BackgroundMore ();
+//!
+//! @code
+//! for (int time = 0; time <= 240; time++)
+//!     {
+//!     txClear ();
+//!     Background ();
+//!
+//!     Oblaka (time);
+//!
+//!     txSleep (1);
+//!      }
+//! @endcode
+//}------------------------------------------------------------------------------------------------------
+
+void Oblaka (int time)
     {
     OblakoDraw (-480 + time / 2,  30, 1.25, 1.25);
     OblakoDraw (-330 + time / 2,  70,    1,    1);
@@ -156,23 +215,59 @@ void Obloka (int time)
     OblakoDraw (1700 - time / 2,  50, 1.25, 1.25);
     }
 
+//{------------------------------------------------------------------------------------------------------
+//! @ingroup Fon
+//!
+//! Рисует светящее солнце и облака вместе
+//!
+//! @param time     Показатель времени, от которого зависит положение облаков и длина лучей солнца
+//!
+//! @see    Background (); BackgroundBeach (); BackgroundMore ();
+//!
+//! @par            Пример использования:
+//!
+//! @code
+//! for (int time = 0; time <= 240; time++)
+//!     {
+//!     txClear ();
+//!     Background ();
+//!
+//!     ZadniiPlan (time);
+//!
+//!     txSleep (1);
+//!     }
+//! @endcode
+//!
+//! @note           Длина лучей будет увеличиваться на 1 каждые 40 кадров
+//}------------------------------------------------------------------------------------------------------
+
 void ZadniiPlan (int time)
     {
     SolncaSvet (time);
-    Obloka (time);
+    Oblaka (time);
     }
 
 //{------------------------------------------------------------------------------------------------------
-//! Р РёСЃСѓРµС‚ Р»РµСЃРѕРїРѕР»РѕСЃСѓ РґР»СЏ С„СѓРЅРєС†РёРё Background
+//! @ingroup Fon
 //!
-//! @param x        x-РєРѕРѕСЂРґРёРЅР°С‚Р° РѕР±СЉРµРєС‚Р°
-//! @param time     Р’СЂРµРјСЏ, РѕС‚ РєРѕС‚РѕСЂРѕРіРѕ Р·Р°РІРёСЃРёС‚ x-РєРѕРѕСЂРґРёРЅР°С‚Р° РѕР±СЉРµРєС‚Р°
+//! Рисует лесополосу с цветами для функции Background
 //!
-//! @par            РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ:
+//! @param time     Время, от которого зависит x-координата каждого объекта
 //!
-//! @see            Background ()
+//! @see    Background ();
 //!
-//! @code           Lesopolosa (100);
+//! @par            Пример использования:
+//!
+//! @code
+//! for (int time = 0; time <= 240; time++)
+//!     {
+//!     txClear ();
+//!     Background ();
+//!
+//!     Lesopolosa (time);
+//!
+//!     txSleep (1);
+//!     }
 //! @endcode
 //}------------------------------------------------------------------------------------------------------
 
@@ -189,16 +284,26 @@ void Lesopolosa (int time)
     }
 
 //{------------------------------------------------------------------------------------------------------
-//! Р РёСЃСѓРµС‚ Р»РµСЃРѕРїРѕР»РѕСЃСѓ РґР»СЏ С„СѓРЅРєС†РёРё BackgroundSize
+//! @ingroup Fon
 //!
-//! @param x        x-РєРѕРѕСЂРґРёРЅР°С‚Р° РѕР±СЉРµРєС‚Р°
-//! @param time     Р’СЂРµРјСЏ, РѕС‚ РєРѕС‚РѕСЂРѕРіРѕ Р·Р°РІРёСЃРёС‚ x-РєРѕРѕСЂРґРёРЅР°С‚Р° РѕР±СЉРµРєС‚Р°
+//! Рисует лесополосу с цветами для функции BackgroundSize
 //!
-//! @par            РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ:
+//! @param time     Время, от которого зависит x-координата каждого объекта
 //!
-//! @see            BackgroundSize ()
+//! @see    BackgroundSize ();
 //!
-//! @code           LesopolosaSize (50);
+//! @par            Пример использования:
+//!
+//! @code
+//! for (int time = 0; time <= 240; time++)
+//!     {
+//!     txClear ();
+//!     BackgroundSize ();
+//!
+//!     LesopolosaSize (time);
+//!
+//!     txSleep (1);
+//!     }
 //! @endcode
 //}------------------------------------------------------------------------------------------------------
 
@@ -215,13 +320,30 @@ void LesopolosaSize (int time)
     }
 
 //{------------------------------------------------------------------------------------------------------
-//! Р РёСЃСѓРµС‚ РїРµСЃС‡Р°РЅС‹Р№ РїР»СЏР¶ Р±Р°Р»С‚РёР№СЃРєРѕРіРѕ РјРѕСЂСЏ
+//! @ingroup Fon
 //!
-//! @param volny    РЁРёСЂРёРЅР° СЌР»Р»РёРїСЃРѕРІ, РёР·РѕР±СЂР°Р¶Р°СЋС‰РёС… РІРѕР»РЅС‹
+//! Рисует песчаный пляж балтийского моря
 //!
-//! @par            РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ:
+//! @param volny    Ширина эллипсов, изображающих волны
 //!
-//! @code           BackgroundMore (720, 400, 40);
+//! @par            Пример использования:
+//!
+//! @code
+//! for (int time = 0; time <= 240; time++)
+//!     {
+//!     txClear ();
+//!
+//!     if ((time / 80) % 2 < 1)
+//!         {
+//!         BackgroundBeach (1 + (time / 2) %40);
+//!         }
+//!     else
+//!         {
+//!         BackgroundBeach (40 - (time / 2) % 40);
+//!         }
+//!
+//!     txSleep (1);
+//!      }
 //! @endcode
 //}------------------------------------------------------------------------------------------------------
 
@@ -251,16 +373,17 @@ void BackgroundBeach (int Volny)
     }
 
 //{------------------------------------------------------------------------------------------------------
-//! Р РёСЃСѓРµС‚ СЃР°РјС‹Р№ Р»СѓС‡С€РёР№ Р°РІС‚РѕРјРѕР±РёР»СЊ РЅР° РїР»Р°РЅРµС‚Рµ Р·РµРјР»СЏ!
+//! @ingroup Auto
 //!
-//! @param x        x-РєРѕРѕСЂРґРёРЅР°С‚Р° РјР°С€РёРЅС‹
-//! @param y        y-РєРѕРѕСЂРґРёРЅР°С‚Р° РјР°С€РёРЅС‹
+//! Рисует самый лучший автомобиль на планете земля!
 //!
-//! @note           РќР°С‡Р°Р»СЊРЅРѕР№ С‚РѕС‡РєРѕР№ СЏРІР»СЏРµС‚СЃСЏ РЅР°С‡Р°Р»Рѕ Р·Р°РґРЅРµРіРѕ РєСЂС‹Р»Р°
+//! @param x        x-координата машины
+//! @param y        y-координата машины
 //!
-//! @par            РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ:
+//! @par            Пример использования:
 //!
-//! @code           (x + 330, y - 45, x + 340, y - 40);
+//! @code
+//!         SemerkaDraw (330, 450);
 //! @endcode
 //}------------------------------------------------------------------------------------------------------
 
@@ -314,16 +437,35 @@ void SemerkaDraw (int x, int y)
     }
 
 //{------------------------------------------------------------------------------------------------------
-//! Р РёСЃСѓРµС‚ РєСѓСЃС‚С‹ С‚СЂР°РІС‹ РЅР° Р±РµСЂРµРіСѓ Р±Р°Р»С‚РёР№СЃРєРѕРіРѕ РјРѕСЂСЏ
+//! @ingroup Fon
 //!
-//! @param y        y-РєРѕРѕСЂРґРёРЅР°С‚Р° РєСѓСЃС‚РѕРІ С‚СЂР°РІС‹
-//! @param time     РџР°СЂР°РјРµС‚СЂ РІСЂРµРјРµРЅРё, РѕС‚ РєРѕС‚РѕСЂРѕРіРѕ Р·Р°РІРёСЃРёС‚ РЅР°Р»РёС‡РёРµ РІРµС‚СЂР°
+//! Рисует кусты травы на берегу балтийского моря
 //!
-//! @par            РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ:
+//! @param y        y-координата кустов травы
+//! @param time     Параметр времени, от которого зависят порывы западного ветра
 //!
-//! @see            BackgroundMore ()
+//! @see    BackgroundBeach ();
 //!
-//! @code           MnogoTravi (480, 121);
+//! @par            Пример использования:
+//!
+//! @code
+//! for (int time = 0; time <= 240; time++)
+//!     {
+//!     txClear ();
+//!
+//!     if ((time / 80) % 2 < 1)
+//!         {
+//!         BackgroundBeach (1 + (time / 2) %40);
+//!         }
+//!     else
+//!         {
+//!         BackgroundBeach (40 - (time / 2) % 40);
+//!         }
+//!
+//!     MnogoTravi (480, time);
+//!
+//!     txSleep (1);
+//!      }
 //! @endcode
 //}------------------------------------------------------------------------------------------------------
 
@@ -339,6 +481,24 @@ void MnogoTravi (int y, int time)
         }
     }
 
+//{------------------------------------------------------------------------------------------------------
+//! @ingroup Fon
+//!
+//! Рисует дорожную разметку
+//!
+//! @param y        y-координата разметки
+//! @param time     Показатель времени, от которого зависит положение дорожной разметки
+//!
+//! @see    Background (); BackgroundSize ();
+//!
+//! @par            Пример использования:
+//!
+//! @code
+//!         Background ();
+//!         RazmetkaDraw (520, 0);
+//! @endcode
+//}------------------------------------------------------------------------------------------------------
+
 void RazmetkaDraw (int y, int time)
     {
     for (int x = -1400; x <= 2800; x += 120)
@@ -350,6 +510,22 @@ void RazmetkaDraw (int y, int time)
         txPolygon (razmetka, 4);
         }
     }
+
+//{------------------------------------------------------------------------------------------------------
+//! @ingroup VtoroiPlan
+//!
+//! Рисует косяк журавлей
+//!
+//! @param x        x-координата крайнего верхнего левого журавля
+//! @param y        y-координата крайнего верхнего левого журавля
+//! @param time     Показатель времени, от которого зависит положение журавлей
+//!
+//! @par            Пример использования:
+//!
+//! @code
+//!         JuravleiKosyak (120, 100, 0);
+//! @endcode
+//}------------------------------------------------------------------------------------------------------
 
 void JuravleiKosyak (int x, int y, int time)
     {
@@ -368,6 +544,22 @@ void JuravleiKosyak (int x, int y, int time)
             }
         }
     }
+
+//{------------------------------------------------------------------------------------------------------
+//! @ingroup Fon
+//!
+//! Рисует пляж балтийского моря
+//!
+//! @param x        x-координата чуть правее центра окна
+//! @param y        y-координата чуть ниже центра окна
+//! @param Volny    Увеличивает/уменьшает морские волны
+//!
+//! @par            Пример использования:
+//!
+//! @code
+//!         BackgroundMore (720, 400, 45);
+//! @endcode
+//}------------------------------------------------------------------------------------------------------
 
 void BackgroundMore (int x, int y, int Volny)
     {
@@ -391,6 +583,22 @@ void BackgroundMore (int x, int y, int Volny)
     txSetFillColor (TX_MYBLUE);
     txRectangle (0, 0, 1400, 200);
     }
+
+//{------------------------------------------------------------------------------------------------------
+//! @ingroup Fon
+//!
+//! Рисует остановку
+//!
+//! @param x        x-координата остановки
+//! @param y        y-координата остановки
+//! @param Size     Размер остановки
+//!
+//! @par            Пример использования:
+//!
+//! @code
+//!         OstanovkaDraw (300, 600, 1.25);
+//! @endcode
+//}------------------------------------------------------------------------------------------------------
 
 void OstanovkaDraw (int x, int y, double Size)
     {
@@ -449,45 +657,20 @@ void OstanovkaDraw (int x, int y, double Size)
     }
 
 //{------------------------------------------------------------------------------------------------------
-//! Р РёСЃСѓРµС‚ Р·Р°РјРµС‡Р°С‚РµР»СЊРЅРѕРіРѕ РјСѓР¶С‡РёРЅСѓ СЃР·Р°РґРё
+//! @ingroup Fon
 //!
-//! @param x            x-РєРѕРѕСЂРґРёРЅР°С‚Р° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ РјРёСЃС‚РµСЂР°
-//! @param y            y-РєРѕРѕСЂРґРёРЅР°С‚Р° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ РјРёСЃС‚РµСЂР°
-//! @param Size         Р Р°Р·РјРµСЂ РёР·РѕР±СЂР°Р¶РµРЅРёСЏ РјРёСЃС‚РµСЂР°
+//! Рисует сердечко
 //!
-//! @note               Р›РµРІР°СЏ/РїСЂР°РІР°СЏ СЃС‚РѕСЂРѕРЅР° РѕРїСЂРµРґРµР»СЏРµС‚СЃСЏ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ СЃРёРґСЏС‰РµРіРѕ Р·Р° РєРѕРјРїСЊСЋС‚РµСЂРѕРј
-//! @note               РќР°С‡Р°Р»СЊРЅРѕР№ С‚РѕС‡РєРѕР№ СЏРІР»СЏРµС‚СЃСЏ С†РµРЅС‚СЂ РіРѕР»РѕРІС‹
+//! @param x        x-координата сердечка
+//! @param y        y-координата сердечка
+//! @param Size     Размер сердечка
 //!
-//! @par                РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ:
+//! @par            Пример использования:
 //!
-//! @code               MisterZadDraw (1100, 180, 2);
+//! @code
+//!         Serdechko (700, 350, 2);
 //! @endcode
 //}------------------------------------------------------------------------------------------------------
-
-void MisterZadDraw (int x, int y, double Size)
-    {
-    txSetColor (TX_MYBROWN);
-    txSetFillColor (TX_WHITE);
-    txCircle (x, y, 20 * Size);
-
-    txSetColor (TX_BLACK);
-    txSetFillColor (TX_BLACK);
-    txRectangle (x - 20 * Size, y - 25 * Size, x + 20 * Size, y - 10 * Size);
-
-    txSetColor (TX_BLUE);
-    txSetFillColor (TX_BLUE);
-    POINT telo[3] = {{ROUND (x - 20 * Size), ROUND (y + 20 * Size)},
-                     {ROUND (x + 20 * Size), ROUND (y + 20 * Size)},
-                     {       x,              ROUND (y + 80 * Size)}};
-    txPolygon (telo, 3);
-
-    txSetColor (TX_BLACK, 2);
-    txLine (x - 13 * Size, y + 40 * Size, x - 25 * Size, y + 70 * Size);
-    txLine (x + 13 * Size, y + 40 * Size, x + 25 * Size, y + 70 * Size);
-
-    txLine (x, y + 80 * Size, x - 15 * Size, y + 110 * Size);
-    txLine (x, y + 80 * Size, x + 15 * Size, y + 110 * Size);
-    }
 
 void Serdechko (int x, int y, double Size)
     {
@@ -505,6 +688,22 @@ void Serdechko (int x, int y, double Size)
                             {ROUND (x + 20 * Size),        y             }};
     txPolygon (Serdechko, 10);
     }
+
+//{------------------------------------------------------------------------------------------------------
+//! @ingroup Fon
+//!
+//! Рисует солнышко
+//!
+//! @param x            x-координата солнышка
+//! @param y            y-координата солнышка
+//! @param DlinaLucha   Длина солнечных лучей
+//!
+//! @par                Пример использования:
+//!
+//! @code
+//!         SolnceDraw (1200, 150, 40);
+//! @endcode
+//}------------------------------------------------------------------------------------------------------
 
 void SolnceDraw (int x, int y, int DlinaLucha)
     {
@@ -526,6 +725,23 @@ void SolnceDraw (int x, int y, int DlinaLucha)
     txCircle (x, y, 35);
     }
 
+//{------------------------------------------------------------------------------------------------------
+//! @ingroup Fon
+//!
+//! Рисует кустик травы
+//!
+//! @param x        x-координата кустика
+//! @param y        y-координата кустика
+//! @param Veter    Порывы западного ветра. 0 - штиль, 1 - порыв ветра
+//! @param Size     Размер кустика
+//!
+//! @par            Пример использования:
+//!
+//! @code
+//!         Trava (300, 500, 0, 1);
+//! @endcode
+//}------------------------------------------------------------------------------------------------------
+
 void Trava (int x, int y, int Veter, double Size)
     {
     txSetColor (TX_GREEN, 3);
@@ -539,6 +755,23 @@ void Trava (int x, int y, int Veter, double Size)
     txPolygon (trava, 6);
     }
 
+//{------------------------------------------------------------------------------------------------------
+//! @ingroup VtoroiPlan
+//!
+//! Рисует журавлика
+//!
+//! @param x        x-координата журавлика
+//! @param y        y-координата журавлика
+//! @param Size     Размер журавлика
+//! @param Krilya   Положение крыльев. 0 - взмах, 1 - крылья расправлены
+//!
+//! @par            Пример использования:
+//!
+//! @code
+//!         JuravlDraw (300, 500, 1.25, 1);
+//! @endcode
+//}------------------------------------------------------------------------------------------------------
+
 void JuravlDraw (int x, int y, double Size, int Krilya)
     {
     txSetColor (TX_BLACK, 2);
@@ -548,18 +781,19 @@ void JuravlDraw (int x, int y, double Size, int Krilya)
     }
 
 //{------------------------------------------------------------------------------------------------------
-//! Р РёСЃСѓРµС‚ СЂС‹Р±Р°РєР° РЅР° Р»РѕРґРєРµ
+//! @ingroup VtoroiPlan
 //!
-//! @param x            x-РєРѕРѕСЂРґРёРЅР°С‚Р° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ РєРѕС‚РёРєР°
-//! @param y            y-РєРѕРѕСЂРґРёРЅР°С‚Р° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ РєРѕС‚РёРєР°
-//! @param Udochka      Р—Р°Р±СЂР°СЃС‹РІР°РЅРёРµ СѓРґРѕС‡РєРё СЂС‹Р±Р°РєРѕРј. 0 - СЂР°Р·РјР°С… СѓРґРѕС‡РєРё, 1 - Р·Р°Р±СЂР°СЃС‹РІР°РЅРёРµ
-//! @param Size         Р Р°Р·РјРµСЂ РєРѕС‚РёРєР°
+//! Рисует рыбака
 //!
-//! @note               РќР°С‡Р°Р»СЊРЅРѕР№ С‚РѕС‡РєРѕР№ СЏРІР»СЏРµС‚СЃСЏ С†РµРЅС‚СЂ С‚СѓР»РѕРІРёС‰Р° СЂС‹Р±Р°РєР°
+//! @param x        x-координата рыбака
+//! @param y        y-координата рыбака
+//! @param Udochka  Положение удочки. 1 - замах удочки, 0 - заброс удочки
+//! @param Size     Размер рыбака
 //!
-//! @par                РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ:
+//! @par            Пример использования:
 //!
-//! @code               Rybak (200, 210, 1, 1);
+//! @code
+//!         Rybak (300, 500, 1, 2);
 //! @endcode
 //}------------------------------------------------------------------------------------------------------
 
@@ -613,12 +847,29 @@ void Rybak (int x, int y, int Udochka, double Size)
 
     txSetColor (TX_BLACK);
     txSetFillColor (TX_WHITE);
-    txCircle (x, y - 45, 15 * Size);
+    txCircle (x, y - 45 * Size, 15 * Size);
 
     txSetColor (TX_MYGREEN);
     txSetFillColor (TX_MYGREEN);
     txRectangle (x - 13 * Size, y - 60 * Size, x + 13 * Size, y - 50 * Size);
     }
+
+//{------------------------------------------------------------------------------------------------------
+//! @ingroup Fon
+//!
+//! Рисует облако
+//!
+//! @param x        x-координата облака
+//! @param y        y-координата облака
+//! @param SizeX    Увеличение длины облака
+//! @param SizeY    Увеличение ширины облака
+//!
+//! @par            Пример использования:
+//!
+//! @code
+//!         OblakoDraw (300, 100, 1.75, 1.5);
+//! @endcode
+//}------------------------------------------------------------------------------------------------------
 
 void OblakoDraw (int x, int y, double SizeX, double SizeY)
     {
@@ -628,75 +879,59 @@ void OblakoDraw (int x, int y, double SizeX, double SizeY)
     txEllipse (x + 40 * SizeX, y - 10 * SizeY, x + 120 * SizeX, y + 40 * SizeY);
     }
 
-void DerevoDraw (int x, int y, double Size, int Otragenie)
+//{------------------------------------------------------------------------------------------------------
+//! @ingroup Fon
+//!
+//! Рисует дерево
+//!
+//! @param x            x-координата дерева
+//! @param y            y-координата дерева
+//! @param Size         Размеры дерева
+//! @param Storona      Отражает дерево по горизонтали. -1 - отразить, 1 - оставить без изменений
+//!
+//! @par                Пример использования:
+//!
+//! @code
+//!         DerevoDraw (300, 100, 2, -1);
+//! @endcode
+//}------------------------------------------------------------------------------------------------------
+
+void DerevoDraw (int x, int y, double Size, int Storona)
     {
     txSetColor (TX_MYBROWN);
     txSetFillColor (TX_MYBROWN);
     POINT Stvol [5] = {{       x,                                 y              },
-                       {ROUND (x - 15 * Size * Otragenie), ROUND (y +  95 * Size)},
-                       {ROUND (x -  5 * Size * Otragenie), ROUND (y + 105 * Size)},
-                       {ROUND (x +  2 * Size * Otragenie), ROUND (y +  98 * Size)},
-                       {ROUND (x + 15 * Size * Otragenie), ROUND (y + 100 * Size)}};
+                       {ROUND (x - 15 * Size * Storona), ROUND (y +  95 * Size)},
+                       {ROUND (x -  5 * Size * Storona), ROUND (y + 105 * Size)},
+                       {ROUND (x +  2 * Size * Storona), ROUND (y +  98 * Size)},
+                       {ROUND (x + 15 * Size * Storona), ROUND (y + 100 * Size)}};
     txPolygon (Stvol, 5);
 
     txSetColor (TX_GREEN);
     txSetFillColor (TX_GREEN);
     txCircle (x,                           y,             20 * Size);
-    txCircle (x - (20 * Size * Otragenie), y + 20 * Size, 20 * Size);
-    txCircle (x + (10 * Size * Otragenie), y + 30 * Size, 30 * Size);
-    txCircle (x - (20 * Size * Otragenie), y + 40 * Size, 20 * Size);
+    txCircle (x - (20 * Size * Storona), y + 20 * Size, 20 * Size);
+    txCircle (x + (10 * Size * Storona), y + 30 * Size, 30 * Size);
+    txCircle (x - (20 * Size * Storona), y + 40 * Size, 20 * Size);
     }
 
 //{------------------------------------------------------------------------------------------------------
-//! Р РёСЃСѓРµС‚ Р·Р°РјРµС‡Р°С‚РµР»СЊРЅРѕРіРѕ РјСѓР¶С‡РёРЅСѓ РІ РїСЂРѕС„РёР»СЊ
+//! @ingroup Fon
 //!
-//! @param x            x-РєРѕРѕСЂРґРёРЅР°С‚Р° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ РјРёСЃС‚РµСЂР°
-//! @param y            y-РєРѕРѕСЂРґРёРЅР°С‚Р° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ РјРёСЃС‚РµСЂР°
-//! @param UpNogaL      РџРѕРґРЅРёРјР°РµС‚ Р»РµРІСѓСЋ РЅРѕРіСѓ. 0 - РѕРїСѓС‰РµРЅРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ, 1 - РїРѕРґРЅСЏС‚РѕРµ
-//! @param UpNogaP      РџРѕРґРЅРёРјР°РµС‚ РїСЂР°РІСѓСЋ РЅРѕРіСѓ. 0 - РѕРїСѓС‰РµРЅРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ, 1 - РїРѕРґРЅСЏС‚РѕРµ
-//! @param Size         Р Р°Р·РјРµСЂ РёР·РѕР±СЂР°Р¶РµРЅРёСЏ РјРёСЃС‚РµСЂР°
+//! Рисует цветок
 //!
-//! @note               Р›РµРІР°СЏ/РїСЂР°РІР°СЏ СЃС‚РѕСЂРѕРЅР° РѕРїСЂРµРґРµР»СЏРµС‚СЃСЏ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ СЃРёРґСЏС‰РµРіРѕ Р·Р° РєРѕРјРїСЊСЋС‚РµСЂРѕРј
-//! @note               РќР°С‡Р°Р»СЊРЅРѕР№ С‚РѕС‡РєРѕР№ СЏРІР»СЏРµС‚СЃСЏ С†РµРЅС‚СЂ РіРѕР»РѕРІС‹
+//! @param x            x-координата цветка
+//! @param y            y-координата цветка
+//! @param Size         Размер цветка
+//! @param centr        Задаёт цвет серединки
+//! @param lepestki     Задаёт цвет лепестков
 //!
-//! @par                РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ:
+//! @par                Пример использования:
 //!
-//! @code               MisterBokDraw (1100, 180, 1, 0, 2);
+//! @code
+//!         CvetokDraw (300, 100, 1.5, TX_WHITE, TX_ORANGE);
 //! @endcode
 //}------------------------------------------------------------------------------------------------------
-
-void MisterBokDraw (int x, int y, int UpNogaL, int UpNogaP, double Size)
-    {
-    txSetColor (TX_MYBROWN);
-    txSetFillColor (TX_WHITE);
-    txCircle (x, y, 20 * Size);
-
-    txSetColor (TX_BLACK);
-    txSetFillColor (TX_WHITE);
-    txCircle (x - 7 * Size, y - 5 * Size, 4 * Size);
-
-    txSetColor (TX_BLACK);
-    txSetFillColor (TX_BROWN);
-    txCircle (x - 7 * Size, y - 5 * Size, 2 * Size);
-
-    txSetColor (TX_BLACK, 2);
-    txSetFillColor (TX_BLACK);
-    txRectangle (x - 20 * Size, y - 25 * Size, x + 20 * Size, y - 10 * Size);
-    txLine (x - 40 * Size, y - 10 * Size, x - 20 * Size, y - 10 * Size);
-
-    txSetColor (TX_BLUE);
-    txSetFillColor (TX_BLUE);
-    POINT telo[3] = {{ROUND (x - 20 * Size), ROUND (y + 20 * Size)},
-                     {ROUND (x + 20 * Size), ROUND (y + 20 * Size)},
-                     {       x,              ROUND (y + 80 * Size)}};
-    txPolygon (telo, 3);
-
-    txSetColor (TX_BLACK, 2);
-    txLine (x, y + 40 * Size, x - 20 * Size, y + 60 * Size);
-
-    txLine (x, y + 80 * Size, x - 15 * Size, y + (110 - 15 * UpNogaL) * Size);
-    txLine (x, y + 80 * Size, x + 15 * Size, y + (110 - 15 * UpNogaP) * Size);
-    }
 
 void CvetokDraw (int x, int y, double Size, COLORREF centr, COLORREF lepestki)
     {
@@ -715,122 +950,23 @@ void CvetokDraw (int x, int y, double Size, COLORREF centr, COLORREF lepestki)
     }
 
 //{------------------------------------------------------------------------------------------------------
-//! Р РёСЃСѓРµС‚ Р·Р°РјРµС‡Р°С‚РµР»СЊРЅРѕРіРѕ СЂС‹Р¶РµРіРѕ РєРѕС‚РёРєР° СЃР·Р°РґРё))
+//! @ingroup Auto
 //!
-//! @param x            x-РєРѕРѕСЂРґРёРЅР°С‚Р° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ РєРѕС‚РёРєР°
-//! @param y            y-РєРѕРѕСЂРґРёРЅР°С‚Р° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ РєРѕС‚РёРєР°
-//! @param Size         Р Р°Р·РјРµСЂ РєРѕС‚РёРєР°
-//! @param Us1          РџРѕР»РѕР¶РµРЅРёРµ РІРµСЂС…РЅРёС… СѓСЃРѕРІ. 0 - РЅР°С‡Р°Р»СЊРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ, 1 - РїРѕРґРЅРёРјР°СЋС‚СЃСЏ РІРІРµСЂС…
-//! @param Us2          РџРѕР»РѕР¶РµРЅРёРµ СЃСЂРµРґРЅРёС… СѓСЃРѕРІ. 0 - РЅР°С‡Р°Р»СЊРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ, 1 - РїРѕРґРЅРёРјР°СЋС‚СЃСЏ РІРІРµСЂС…
-//! @param Us3          РџРѕР»РѕР¶РµРЅРёРµ РЅРёР¶РЅРёС… СѓСЃРѕРІ. 0 - РЅР°С‡Р°Р»СЊРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ, 1 - РїРѕРґРЅРёРјР°СЋС‚СЃСЏ РІРІРµСЂС…
-//! @param Hvost        РљРѕС‚РёРє РјР°С€РµС‚ С…РІРѕСЃС‚РѕРј РІР»РµРІРѕ. 0 - РЅР°С‡Р°Р»СЊРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ, 1 - РІР»РµРІРѕ
+//! Рисует знаменитый Москвич 2141
 //!
-//! @note               РќР°С‡Р°Р»СЊРЅРѕР№ С‚РѕС‡РєРѕР№ СЏРІР»СЏРµС‚СЃСЏ Р»РµРІС‹Р№ СѓРіРѕР» РіРѕР»РѕРІС‹
+//! @param x            x-координата расположения автомобиля
+//! @param y            y-координата расположения автомобиля
+//! @param KapotUp      Открывает/закрывает капот
+//! @param OknoDown     Открывает/закрывает заднее окно. Окно опускается при отрицательных значениях,
+//!                     0 - окно закрыто.
+//! @param Antena       Наклоняет антену. Отрицательные значания - влево, положительные - вправо
+//! @param Avariikaa    Включение/отключение аварийной сигнализации. 1 - лампочка горит, 0 - нет
+//! @param Size         Размер москвича
 //!
-//! @par                РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ:
+//! @par                Пример использования:
 //!
-//! @code               CatDraw (720, 570, 0.75, 1, 1, 0, 1);
-//! @endcode
-//}------------------------------------------------------------------------------------------------------
-
-void CatZadDraw (int x, int y, double Size, int Us1, int Us2, int Us3, int Hvost)
-    {
-    txSetColor (TX_BLACK, 2);
-    txSetFillColor (TX_ORANGE);
-    txEllipse (x,             y + 100 * Size, x +  40 * Size, y + 120 * Size);
-    txEllipse (x + 60 * Size, y + 100 * Size, x + 100 * Size, y + 120 * Size);
-    txEllipse (x + 10 * Size, y +  20 * Size, x +  90 * Size, y + 120 * Size);
-
-    txSetColor (TX_BLACK, 8);
-    txLine (x + 50 * Size, y + 100 * Size, x + (30 + 20 * Hvost) * Size, y + 140 * Size);
-
-    txSetColor (TX_BLACK);
-    txLine (x + 50 * Size, y + 20 * Size, x + 100 * Size, y + (15 - 3 * Us1) * Size);
-    txLine (x + 50 * Size, y + 20 * Size, x +  90 * Size, y + (25 - 3 * Us2) * Size);
-    txLine (x + 50 * Size, y + 20 * Size, x +  95 * Size, y + (35 + 3 * Us3) * Size);
-
-    txLine (x + 50 * Size, y + 20 * Size, x,              y + (15 - 3 * Us1) * Size);
-    txLine (x + 50 * Size, y + 20 * Size, x +  10 * Size, y + (25 - 3 * Us2) * Size);
-    txLine (x + 50 * Size, y + 20 * Size, x +   5 * Size, y + (35 + 3 * Us3) * Size);
-
-    txSetColor (TX_BLACK, 2);
-    txSetFillColor (TX_ORANGE);
-    POINT Ushi [6] = {{x,                            y             }, {ROUND (x +  20 * Size), ROUND (y - 20 * Size)},
-                      {ROUND (x + 30 * Size),        y             }, {ROUND (x +  70 * Size),        y             },
-                      {ROUND (x + 80 * Size), ROUND (y - 20 * Size)}, {ROUND (x + 100 * Size),        y             }};
-    txPolygon (Ushi, 6);
-
-    txPie (x, y - 40 * Size, x + 100 * Size, y + 40 * Size, 180, 180);
-
-    txSetColor (TX_ORANGE, 2);
-    txLine (x +  2 * Size, y, x + 28 * Size, y);
-    txLine (x + 72 * Size, y, x + 97 * Size, y);
-    }
-
-//{------------------------------------------------------------------------------------------------------
-//! Р РёСЃСѓРµС‚ РїСЂРµРєСЂР°СЃРЅСѓСЋ РјР°РґРјСѓР°Р·РµР»СЊ СЃР·Р°РґРё
-//!
-//! @param x            x-РєРѕРѕСЂРґРёРЅР°С‚Р° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ РјР°РґРјСѓР°Р·РµР»СЊ
-//! @param y            y-РєРѕРѕСЂРґРёРЅР°С‚Р° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ РјР°РґРјСѓР°Р·РµР»СЊ
-//! @param UpRukaL      РџРѕРґРЅРёРјР°РµС‚ Р»РµРІСѓСЋ СЂСѓРєСѓ. 0 - РѕРїСѓС‰РµРЅРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ, 1 - РїРѕРґРЅСЏС‚РѕРµ
-//! @param UpRukaP      РџРѕРґРЅРёРјР°РµС‚ РїСЂР°РІСѓСЋ СЂСѓРєСѓ. 0 - РѕРїСѓС‰РµРЅРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ, 1 - РїРѕРґРЅСЏС‚РѕРµ
-//! @param UpNogaL      РџРѕРґРЅРёРјР°РµС‚ Р»РµРІСѓСЋ РЅРѕРіСѓ. 0 - РѕРїСѓС‰РµРЅРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ, 1 - РїРѕРґРЅСЏС‚РѕРµ
-//! @param UpNogaP      РџРѕРґРЅРёРјР°РµС‚ РїСЂР°РІСѓСЋ РЅРѕРіСѓ. 0 - РѕРїСѓС‰РµРЅРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ, 1 - РїРѕРґРЅСЏС‚РѕРµ
-//! @param Size         Р Р°Р·РјРµСЂ РјР°РґРјСѓР°Р·РµР»СЊ
-//!
-//! @note               Р›РµРІР°СЏ/РїСЂР°РІР°СЏ СЃС‚РѕСЂРѕРЅР° РѕРїСЂРµРґРµР»СЏРµС‚СЃСЏ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ СЃРёРґСЏС‰РµРіРѕ Р·Р° РєРѕРјРїСЊСЋС‚РµСЂРѕРј
-//! @note               РќР°С‡Р°Р»СЊРЅРѕР№ С‚РѕС‡РєРѕР№ СЏРІР»СЏРµС‚СЃСЏ С†РµРЅС‚СЂ РіРѕР»РѕРІС‹
-//!
-//! @par                РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ:
-//!
-//! @code               MadamZadDraw (1100, 180, 1, 0, 1, 0, 2);
-//! @endcode
-//}------------------------------------------------------------------------------------------------------
-
-void MadamZadDraw (int x, int y, int UpRukaL, int UpRukaP, int UpNogaL, int UpNogaP, double Size)
-    {
-    txSetColor (TX_PINK);
-    txSetFillColor (TX_PINK);
-    POINT telo[3] = {{       x,              ROUND (y + 20 * Size)},
-                     {ROUND (x + 30 * Size), ROUND (y + 80 * Size)},
-                     {ROUND (x - 30 * Size), ROUND (y + 80 * Size)}};
-    txPolygon (telo, 3);
-
-    txSetColor (TX_MYBROWN);
-    txSetFillColor (TX_MYBROWN);
-    POINT volosy[6] = {{ROUND (x - 10 * Size), ROUND (y + 30 * Size)},
-                       {ROUND (x + 10 * Size), ROUND (y + 30 * Size)},
-                       {ROUND (x + 30 * Size), ROUND (y + 15 * Size)},
-                       {ROUND (x + 15 * Size), ROUND (y - 30 * Size)},
-                       {ROUND (x - 15 * Size), ROUND (y - 30 * Size)},
-                       {ROUND (x - 30 * Size), ROUND (y + 15 * Size)}};
-    txPolygon (volosy, 6);
-
-    txSetColor (TX_BLACK, 2);
-    txLine (x - 13 * Size, y + 45 * Size, x - 40 * Size, y + (55 - 30 * UpRukaL) * Size);
-    txLine (x + 13 * Size, y + 45 * Size, x + 40 * Size, y + (55 - 30 * UpRukaP) * Size);
-
-    txLine (x - 13 * Size, y + 80 * Size, x - 13 * Size, y + (80 + 20 * UpNogaL) * Size);
-    txLine (x + 13 * Size, y + 80 * Size, x + 13 * Size, y + (80 + 20 * UpNogaP) * Size);
-    }
-
-//{------------------------------------------------------------------------------------------------------
-//! Р РёСЃСѓРµС‚ Р·РЅР°РјРµРЅРёС‚С‹Р№ РњРѕСЃРєРІРёС‡ 2141
-//!
-//! @param x            x-РєРѕРѕСЂРґРёРЅР°С‚Р° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ Р°РІС‚РѕРјРѕР±РёР»СЏ
-//! @param y            y-РєРѕРѕСЂРґРёРЅР°С‚Р° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ Р°РІС‚РѕРјРѕР±РёР»СЏ
-//! @param KapotUp      РћС‚РєСЂС‹РІР°РµС‚/Р·Р°РєСЂС‹РІР°РµС‚ РєР°РїРѕС‚
-//! @param OknoDown     РћС‚РєСЂС‹РІР°РµС‚/Р·Р°РєСЂС‹РІР°РµС‚ Р·Р°РґРЅРµРµ РѕРєРЅРѕ. РћРєРЅРѕ РѕРїСѓСЃРєР°РµС‚СЃСЏ РїСЂРё РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹С… Р·РЅР°С‡РµРЅРёСЏС…,
-//!                     0 - РѕРєРЅРѕ Р·Р°РєСЂС‹С‚Рѕ.
-//! @param Antena       РќР°РєР»РѕРЅСЏРµС‚ Р°РЅС‚РµРЅСѓ. РћС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Рµ Р·РЅР°С‡Р°РЅРёСЏ - РІР»РµРІРѕ, РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рµ - РІРїСЂР°РІРѕ
-//! @param Avariikaa    Р’РєР»СЋС‡РµРЅРёРµ/РѕС‚РєР»СЋС‡РµРЅРёРµ Р°РІР°СЂРёР№РЅРѕР№ СЃРёРіРЅР°Р»РёР·Р°С†РёРё. 1 - Р»Р°РјРїРѕС‡РєР° РіРѕСЂРёС‚, 0 - РЅРµС‚
-//! @param Size         Р Р°Р·РјРµСЂ РјРѕСЃРєРІРёС‡Р°
-//!
-//! @note               РќР°С‡Р°Р»СЊРЅРѕР№ С‚РѕС‡РєРѕР№ СЏРІР»СЏРµС‚СЃСЏ РЅР°С‡Р°Р»Рѕ РїРµСЂРµРґРЅРµРіРѕ РєСЂС‹Р»Р°
-//!
-//! @par                РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ:
-//!
-//! @code               MoskvichDraw  (1400, 400, -60, -40, 10, 1, 1.5);
+//! @code
+//!         MoskvichDraw (900, 400, -60, -40, 10, 1, 1.5);
 //! @endcode
 //}------------------------------------------------------------------------------------------------------
 
@@ -959,23 +1095,24 @@ void MoskvichDraw (int x, int y, int KapotUp, int OknoDown, int Antena,
     }
 
 //{------------------------------------------------------------------------------------------------------
-//! Р РёСЃСѓРµС‚ Р·Р°РјРµС‡Р°С‚РµР»СЊРЅРѕРіРѕ СЂС‹Р¶РµРіРѕ РєРѕС‚РёРєР°))
+//! @ingroup Geroi
 //!
-//! @param x            x-РєРѕРѕСЂРґРёРЅР°С‚Р° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ РєРѕС‚РёРєР°
-//! @param y            y-РєРѕРѕСЂРґРёРЅР°С‚Р° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ РєРѕС‚РёРєР°
-//! @param Size         Р Р°Р·РјРµСЂ РєРѕС‚РёРєР°
-//! @param Us1          РџРѕР»РѕР¶РµРЅРёРµ РІРµСЂС…РЅРёС… СѓСЃРѕРІ. 0 - РЅР°С‡Р°Р»СЊРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ, 1 - РїРѕРґРЅРёРјР°СЋС‚СЃСЏ РІРІРµСЂС…
-//! @param Us2          РџРѕР»РѕР¶РµРЅРёРµ СЃСЂРµРґРЅРёС… СѓСЃРѕРІ. 0 - РЅР°С‡Р°Р»СЊРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ, 1 - РїРѕРґРЅРёРјР°СЋС‚СЃСЏ РІРІРµСЂС…
-//! @param Us3          РџРѕР»РѕР¶РµРЅРёРµ РЅРёР¶РЅРёС… СѓСЃРѕРІ. 0 - РЅР°С‡Р°Р»СЊРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ, 1 - РїРѕРґРЅРёРјР°СЋС‚СЃСЏ РІРІРµСЂС…
-//! @param Hvost        РљРѕС‚РёРє РјР°С€РµС‚ С…РІРѕСЃС‚РѕРј РІР»РµРІРѕ/РІРїСЂР°РІРѕ. 0 - РІР»РµРІРѕ, 1 - РІРїСЂР°РІРѕ
-//! @param Lapki        Р›Р°РїРєРё РєРѕС‚РёРєР° РёРґСѓС‚)) 0 - С€Р°Рі Р»РµРІС‹РјРё Р»Р°РїРєР°РјРё, 1 - РїСЂР°РІС‹РјРё
-//! @param Stop         Р›Р°РїРєРё РєРѕС‚РёРєР° РїРµСЂРµСЃС‚Р°СЋС‚ РґРІРёРіР°С‚СЊСЃСЏ Рё РїСЂРёРЅРёРјР°СЋС‚ РїРѕР»РѕР¶РµРЅРёРµ СЃС‚РѕСЏ
+//! Рисует Котика
 //!
-//! @note               РќР°С‡Р°Р»СЊРЅРѕР№ С‚РѕС‡РєРѕР№ СЏРІР»СЏРµС‚СЃСЏ Р»РµРІС‹Р№ СѓРіРѕР» РіРѕР»РѕРІС‹
+//! @param x            x-координата расположения автомобиля
+//! @param y            y-координата расположения автомобиля
+//! @param Size         Размер котика
+//! @param Us1          Поднимает верхние ус. 0 - исходное положение, 1 - поднятое
+//! @param Us2          Поднимает средние ус. 0 - исходное положение, 1 - поднятое
+//! @param Us3          Опускает нижние усы. 0 - исходное положение, 1 - поднятое
+//! @param Hvost        Обеспечивает виляние хвостом. 0 - исходное положение хвоста, 1 - смещение вправо
+//! @param Lapki        Изображает передвижение котика. 0 - шаг левыми лапками, 1 - правыми
+//! @param Stop         Приводит лапки котика в положение "стоим на месте". 0 - идём, 1 - стоим
 //!
-//! @par                РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ:
+//! @par                Пример использования:
 //!
-//! @code               CatDraw (720, 570, 0.75, 1, 1, 0, 1, 0, 1);
+//! @code
+//!         CatDraw (500, 500, 0.75, 1 ,1, 0, 1, 1, 0);
 //! @endcode
 //}------------------------------------------------------------------------------------------------------
 
@@ -1038,84 +1175,78 @@ void CatDraw (int x, int y, double Size, int Us1, int Us2, int Us3, int Hvost, i
     }
 
 //{------------------------------------------------------------------------------------------------------
-//! Р РёСЃСѓРµС‚ Р·Р°РјРµС‡Р°С‚РµР»СЊРЅРѕРіРѕ РјСѓР¶С‡РёРЅСѓ
+//! @ingroup Geroi
 //!
-//! @param x            x-РєРѕРѕСЂРґРёРЅР°С‚Р° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ РјРёСЃС‚РµСЂР°
-//! @param y            y-РєРѕРѕСЂРґРёРЅР°С‚Р° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ РјРёСЃС‚РµСЂР°
-//! @param Glaza        Р Р°Р·РјРµСЂ РіР»Р°Р·. РЎР»СѓР¶РёС‚ РґР»СЏ РїРµСЂРµРґР°С‡Рё РіР»СѓР±РѕРєРѕРіРѕ СѓРґРёРІР»РµРЅРёСЏ, Р·Р° СЃС‡С‘С‚ СѓРІРµР»РёС‡РµРЅРёСЏ СЂР°РґРёСѓСЃР°
-//! @param Zrachki      Р Р°Р·РјРµСЂ Р·СЂР°С‡РєРѕРІ. РЎР»СѓР¶РёС‚ РґР»СЏ С‚РѕРіРѕ Р¶Рµ, С‡С‚Рѕ Рё РїР°СЂР°РјРµС‚СЂ "Glaza"
-//! @param Rot          РџРѕР·РІРѕР»СЏРµС‚ РѕС‚РєСЂС‹С‚СЊ Рё Р·Р°РєСЂС‹С‚СЊ СЂРѕС‚ РјСѓР¶С‡РёРЅРµ, Р·Р° СЃС‡С‘С‚ СѓРІРµР»РёС‡РµРЅРёСЏ С€РёСЂРёРЅС‹ СЌР»Р»РёРїСЃР°))
-//! @param UpRukaL      РџРѕРґРЅРёРјР°РµС‚ Р»РµРІСѓСЋ СЂСѓРєСѓ. 0 - РѕРїСѓС‰РµРЅРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ, 1 - РїРѕРґРЅСЏС‚РѕРµ
-//! @param UpRukaP      РџРѕРґРЅРёРјР°РµС‚ РїСЂР°РІСѓСЋ СЂСѓРєСѓ. 0 - РѕРїСѓС‰РµРЅРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ, 1 - РїРѕРґРЅСЏС‚РѕРµ
-//! @param Size         Р Р°Р·РјРµСЂ РёР·РѕР±СЂР°Р¶РµРЅРёСЏ РјРёСЃС‚РµСЂР°
+//! Рисует Котика сзади
 //!
-//! @note               Р›РµРІР°СЏ/РїСЂР°РІР°СЏ СЃС‚РѕСЂРѕРЅР° РѕРїСЂРµРґРµР»СЏРµС‚СЃСЏ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ СЃРёРґСЏС‰РµРіРѕ Р·Р° РєРѕРјРїСЊСЋС‚РµСЂРѕРј
-//! @note               РќР°С‡Р°Р»СЊРЅРѕР№ С‚РѕС‡РєРѕР№ СЏРІР»СЏРµС‚СЃСЏ С†РµРЅС‚СЂ РіРѕР»РѕРІС‹
+//! @param x            x-координата расположения автомобиля
+//! @param y            y-координата расположения автомобиля
+//! @param Size         Размер котика
+//! @param Us1          Поднимает верхние ус. 0 - исходное положение, 1 - поднятое
+//! @param Us2          Поднимает средние ус. 0 - исходное положение, 1 - поднятое
+//! @param Us3          Опускает нижние усы. 0 - исходное положение, 1 - поднятое
+//! @param Hvost        Обеспечивает виляние хвостом. 0 - исходное положение хвоста, 1 - смещение вправо
 //!
-//! @par                РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ:
+//! @par                Пример использования:
 //!
-//! @code               MisterDraw (1100, 180, 2, TX_BRAU, 1, 1, 2);
+//! @code
+//!         CatZadDraw (500, 300, 2, 1 ,1, 0, 1);
 //! @endcode
 //}------------------------------------------------------------------------------------------------------
 
-void MisterDraw (int x, int y, int Glaza, COLORREF Zrachki, int Rot,
-                int UpRukaL, int UpRukaP, double Size)
+void CatZadDraw (int x, int y, double Size, int Us1, int Us2, int Us3, int Hvost)
     {
-    txSetColor (TX_MYBROWN);
-    txSetFillColor (TX_WHITE);
-    txCircle (x, y, 20 * Size);
+    txSetColor (TX_BLACK, 2);
+    txSetFillColor (TX_ORANGE);
+    txEllipse (x,             y + 100 * Size, x +  40 * Size, y + 120 * Size);
+    txEllipse (x + 60 * Size, y + 100 * Size, x + 100 * Size, y + 120 * Size);
+    txEllipse (x + 10 * Size, y +  20 * Size, x +  90 * Size, y + 120 * Size);
+
+    txSetColor (TX_BLACK, 8);
+    txLine (x + 50 * Size, y + 100 * Size, x + (30 + 20 * Hvost) * Size, y + 140 * Size);
 
     txSetColor (TX_BLACK);
-    txSetFillColor (TX_BLACK);
-    txRectangle (x - 20 * Size, y - 25 * Size, x + 20 * Size, y - 10 * Size);
+    txLine (x + 50 * Size, y + 20 * Size, x + 100 * Size, y + (15 - 3 * Us1) * Size);
+    txLine (x + 50 * Size, y + 20 * Size, x +  90 * Size, y + (25 - 3 * Us2) * Size);
+    txLine (x + 50 * Size, y + 20 * Size, x +  95 * Size, y + (35 + 3 * Us3) * Size);
 
-    txSetColor (TX_BLACK);
-    txSetFillColor (TX_WHITE);
-    txCircle (x - 7 * Size, y - 5 * Size, 2 * Glaza * Size);
-    txCircle (x + 7 * Size, y - 5 * Size, 2 * Glaza * Size);
-
-    txSetColor (TX_BLACK);
-    txSetFillColor (Zrachki);
-    txCircle (x - 7 * Size, y - 5 * Size, 2 * Size);
-    txCircle (x + 7 * Size, y - 5 * Size, 2 * Size);
-
-    txSetColor (TX_RED);
-    txSetFillColor (TX_RED);
-    txEllipse (x - 7 * Size, y + (10 - Rot) * Size, x + 7 * Size, y + (10 + Rot) * Size);
-
-    txSetColor (TX_BLUE);
-    txSetFillColor (TX_BLUE);
-    POINT telo[3] = {{ ROUND (x - 20 * Size), ROUND (y + 20 * Size)},
-                     { ROUND (x + 20 * Size), ROUND (y + 20 * Size)},
-                     {        x,              ROUND (y + 80 * Size)}};
-    txPolygon (telo, 3);
+    txLine (x + 50 * Size, y + 20 * Size, x,              y + (15 - 3 * Us1) * Size);
+    txLine (x + 50 * Size, y + 20 * Size, x +  10 * Size, y + (25 - 3 * Us2) * Size);
+    txLine (x + 50 * Size, y + 20 * Size, x +   5 * Size, y + (35 + 3 * Us3) * Size);
 
     txSetColor (TX_BLACK, 2);
-    txLine (x - 13 * Size, y + 40 * Size, x - (25 + 15 * UpRukaL) * Size, y + (70 - 50 * UpRukaL) * Size);
-    txLine (x + 13 * Size, y + 40 * Size, x + (25 + 15 * UpRukaL) * Size, y + (70 - 50 * UpRukaP) * Size);
+    txSetFillColor (TX_ORANGE);
+    POINT Ushi [6] = {{x,                            y             }, {ROUND (x +  20 * Size), ROUND (y - 20 * Size)},
+                      {ROUND (x + 30 * Size),        y             }, {ROUND (x +  70 * Size),        y             },
+                      {ROUND (x + 80 * Size), ROUND (y - 20 * Size)}, {ROUND (x + 100 * Size),        y             }};
+    txPolygon (Ushi, 6);
 
-    txLine (x, y + 80 * Size, x - 15 * Size, y + 110 * Size);
-    txLine (x, y + 80 * Size, x + 15 * Size, y + 110 * Size);
+    txPie (x, y - 40 * Size, x + 100 * Size, y + 40 * Size, 180, 180);
+
+    txSetColor (TX_ORANGE, 2);
+    txLine (x +  2 * Size, y, x + 28 * Size, y);
+    txLine (x + 72 * Size, y, x + 97 * Size, y);
     }
 
 //{------------------------------------------------------------------------------------------------------
-//! Р РёСЃСѓРµС‚ Р°РІС‚РѕР±СѓСЃ, РґРµСЂР¶Р°С‰РёР№ РєСѓСЂСЃ РЅР° Р±Р°Р»С‚РёР№СЃРєРѕРµ РјРѕСЂРµ))
+//! @ingroup Auto
 //!
-//! @param x            x-РєРѕРѕСЂРґРёРЅР°С‚Р° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ Р°РІС‚РѕР±СѓСЃР°
-//! @param y            y-РєРѕРѕСЂРґРёРЅР°С‚Р° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ Р°РІС‚РѕР±СѓСЃР°
-//! @param Zajiganie    РћС‚РІРµС‡Р°РµС‚ Р·Р° СЂР°Р±РѕС‚Сѓ РґРІРёРіР°С‚РµР»СЏ, РєРѕС‚РѕСЂР°СЏ РёР·РѕР±СЂР°Р¶Р°РµС‚СЃСЏ
-//!                     РЅР°Р»РёС‡РёРµРј/РѕС‚СЃСѓС‚СЃС‚РІРёРµРј РІС‹С…Р»РѕРїР°. 0 - РѕС‚СЃСѓС‚СЃС‚РІРёРµ, 1 - РЅР°Р»РёС‡РёРµ
-//! @param Stop         РћС‚РІРµС‡Р°РµС‚ Р·Р° Р·Р°РіРѕСЂР°РЅРёРµ СЃС‚РѕРї-РѕРіРЅРµР№ РїСЂРё РѕСЃС‚Р°РЅРѕРІРєРµ Р°РІС‚РѕР±СѓСЃР°
-//! @param Podveska     РћС‚РІРµС‡Р°РµС‚ Р·Р° РїРѕР»РѕР¶РµРЅРёРµ РєСѓР·РѕРІР°
-//! @param Kolesa       РЈРІРµР»РёС‡РёРІР°РµС‚ РґРёР°РјРµС‚СЂ РєРѕР»РµСЃ
-//! @param Glushitel    Р”Р°Р»СЊРЅРѕСЃС‚СЊ РІС‹С…Р»РѕРїРЅС‹С… РіР°Р·РѕРІ
-//! @param Size         Р Р°Р·РјРµСЂ Р°РІС‚РѕР±СѓСЃР°
+//! Рисует автобус, держащий курс на балтийское море))
 //!
-//! @note               РќР°С‡Р°Р»СЊРЅРѕР№ С‚РѕС‡РєРѕР№ СЏРІР»СЏРµС‚СЃСЏ Р»РµРІР°СЏ РЅРёР¶РЅСЏСЏ С‚РѕС‡РєР° РєСѓР·РѕРІР°
+//! @param x            x-координата расположения автобуса
+//! @param y            y-координата расположения автобуса
+//! @param Zajiganie    Отвечает за работу двигателя, которая изображается
+//!                     наличием/отсутствием выхлопа. 0 - отсутствие, 1 - наличие
+//! @param Stop         Отвечает за загорание стоп-огней при остановке автобуса
+//! @param Podveska     Отвечает за положение кузова
+//! @param Kolesa       Увеличивает диаметр колес
+//! @param Glushitel    Дальность выхлопных газов
+//! @param Size         Размер автобуса
 //!
-//! @par                РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ:
+//! @par                Пример использования:
 //!
-//! @code               BusLDraw (1400, 450, 0, TX_DARKGRAY, 20, 15, 0, 1.25);
+//! @code
+//!         BusLDraw (800, 450, 1, TX_RED, 10, 5, 20, 1.25);
 //! @endcode
 //}------------------------------------------------------------------------------------------------------
 
@@ -1189,89 +1320,26 @@ void BusLDraw (int x, int y, int Zajiganie, COLORREF Stop, int Podveska,
     }
 
 //{------------------------------------------------------------------------------------------------------
-//! Р РёСЃСѓРµС‚ РїСЂРµРєСЂР°СЃРЅСѓСЋ РјР°РґРјСѓР°Р·РµР»СЊ РІ РїСЂРѕС„РёР»СЊ
+//! @ingroup Auto
 //!
-//! @param x            x-РєРѕРѕСЂРґРёРЅР°С‚Р° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ РјР°РґРјСѓР°Р·РµР»СЊ
-//! @param y            y-РєРѕРѕСЂРґРёРЅР°С‚Р° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ РјР°РґРјСѓР°Р·РµР»СЊ
-//! @param UpRukaL      РџРѕРґРЅРёРјР°РµС‚ Р»РµРІСѓСЋ СЂСѓРєСѓ. 0 - РѕРїСѓС‰РµРЅРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ, 1 - РїРѕРґРЅСЏС‚РѕРµ
-//! @param UpRukaP      РџРѕРґРЅРёРјР°РµС‚ РїСЂР°РІСѓСЋ СЂСѓРєСѓ. 0 - РѕРїСѓС‰РµРЅРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ, 1 - РїРѕРґРЅСЏС‚РѕРµ
-//! @param UpNogaL      РџРѕРґРЅРёРјР°РµС‚ Р»РµРІСѓСЋ РЅРѕРіСѓ. 0 - РѕРїСѓС‰РµРЅРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ, 1 - РїРѕРґРЅСЏС‚РѕРµ
-//! @param UpNogaP      РџРѕРґРЅРёРјР°РµС‚ РїСЂР°РІСѓСЋ РЅРѕРіСѓ. 0 - РѕРїСѓС‰РµРЅРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ, 1 - РїРѕРґРЅСЏС‚РѕРµ
-//! @param Size         Р Р°Р·РјРµСЂ РјР°РґРјСѓР°Р·РµР»СЊ
-//! @param Otragenie    РћС‚СЂР°Р¶Р°РµС‚ РёР·РѕР±СЂР°Р¶РµРЅРёРµ РїРѕ РіРѕСЂРёР·РѕРЅС‚Р°Р»Рё.
-//!                     0 - РјР°РґРјСѓР°Р·РµР»СЊ РЅР°РїСЂР°РІР»РµРЅР° РІ Р»РµРІСѓСЋ СЃС‚РѕСЂРѕРЅСѓ, 1 - РІ РїСЂР°РІСѓСЋ
+//! Рисует автобус, держащий курс на балтийское море со стороны дверей))
 //!
-//! @note               РќР°С‡Р°Р»СЊРЅРѕР№ С‚РѕС‡РєРѕР№ СЏРІР»СЏРµС‚СЃСЏ С†РµРЅС‚СЂ РіРѕР»РѕРІС‹
+//! @param x            x-координата расположения автобуса
+//! @param y            y-координата расположения автобуса
+//! @param Zajiganie    Отвечает за работу двигателя, которая изображается
+//!                     наличием/отсутствием выхлопа. 0 - отсутствие, 1 - наличие
+//! @param Stop         Отвечает за загорание стоп-огней при остановке автобуса
+//! @param Podveska     Отвечает за положение кузова
+//! @param Kolesa       Увеличивает диаметр колес
+//! @param Glushitel    Дальность выхлопных газов
+//! @param Size         Размер автобуса
+//! @param DveriDown    Перемещение дверей вниз
+//! @param DveriSide    Перемещение дверей в стороны
 //!
-//! @par                РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ:
+//! @par                Пример использования:
 //!
-//! @code               MadamBokDraw (1100, 180, 1, 0, 1, 1, 2, -1);
-//! @endcode
-//}------------------------------------------------------------------------------------------------------
-
-void MadamBokDraw (int x, int y, int UpRukaL, int UpRukaP,
-                   int UpNogaL, int UpNogaP, double Size, int Otragenie)
-    {
-    txSetColor (TX_MYBROWN);
-    txSetFillColor (TX_WHITE);
-    txCircle (x, y, 20 * Size);
-
-    txSetColor (TX_BLACK);
-    txSetFillColor (TX_WHITE);
-    txCircle (x + 11 * Size * Otragenie, y - 5 * Size, 4 * Size);
-
-    txSetColor (TX_BLACK);
-    txSetFillColor (TX_BLUE);
-    txCircle (x + 11 * Size * Otragenie, y - 5 * Size, 2 * Size);
-
-    txSetColor (TX_MYBROWN);
-    txSetFillColor (TX_MYBROWN);
-    POINT volosy[7] = {{       x,                            ROUND (y + 40 * Size)},
-                       {ROUND (x - (30 * Otragenie) * Size), ROUND (y + 40 * Size)},
-                       {ROUND (x - (40 * Otragenie) * Size), ROUND (y + 20 * Size)},
-                       {ROUND (x - (20 * Otragenie) * Size), ROUND (y - 30 * Size)},
-                       {       x,                            ROUND (y - 30 * Size)},
-                       {ROUND (x + (10 * Otragenie) * Size), ROUND (y - 20 * Size)},
-                       {       x,                            ROUND (y +  5 * Size)}};
-    txPolygon (volosy, 7);
-
-    txSetColor (TX_BLACK, 2);
-    txLine (x, y + 50 * Size, x + (20 * Otragenie - 10 * UpRukaL) * Size, y + (40 - 10 * Otragenie * UpRukaL) * Size);
-
-    txSetColor (TX_PINK);
-    txSetFillColor (TX_PINK);
-    POINT telo[3] = {{       x,              ROUND (y + 20 * Size)},
-                     {ROUND (x + 30 * Size), ROUND (y + 80 * Size)},
-                     {ROUND (x - 30 * Size), ROUND (y + 80 * Size)}};
-    txPolygon (telo, 3);
-
-    txSetColor (TX_BLACK, 2);
-    txLine (x, y + 50 * Size, x + (20 * Otragenie - 10 * UpRukaP) * Size, y + (40 - 10 * Otragenie * UpRukaP) * Size);
-
-    txLine (x - 13 * Size, y + 80 * Size, x - 13 * Size, y + (110 - 20 * UpNogaL) * Size);
-    txLine (x + 13 * Size, y + 80 * Size, x + 13 * Size, y + (110 - 20 * UpNogaP) * Size);
-    }
-
-//{------------------------------------------------------------------------------------------------------
-//! Р РёСЃСѓРµС‚ Р°РІС‚РѕР±СѓСЃ, РґРµСЂР¶Р°С‰РёР№ РєСѓСЂСЃ РЅР° Р±Р°Р»С‚РёР№СЃРєРѕРµ РјРѕСЂРµ))
-//!
-//! @param x            x-РєРѕРѕСЂРґРёРЅР°С‚Р° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ Р°РІС‚РѕР±СѓСЃР°
-//! @param y            y-РєРѕРѕСЂРґРёРЅР°С‚Р° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ Р°РІС‚РѕР±СѓСЃР°
-//! @param Zajiganie    РћС‚РІРµС‡Р°РµС‚ Р·Р° СЂР°Р±РѕС‚Сѓ РґРІРёРіР°С‚РµР»СЏ, РєРѕС‚РѕСЂР°СЏ РёР·РѕР±СЂР°Р¶Р°РµС‚СЃСЏ
-//!                     РЅР°Р»РёС‡РёРµРј/РѕС‚СЃСѓС‚СЃС‚РІРёРµРј РІС‹С…Р»РѕРїР°. 0 - РѕС‚СЃСѓС‚СЃС‚РІРёРµ, 1 - РЅР°Р»РёС‡РёРµ
-//! @param Stop         РћС‚РІРµС‡Р°РµС‚ Р·Р° Р·Р°РіРѕСЂР°РЅРёРµ СЃС‚РѕРї-РѕРіРЅРµР№ РїСЂРё РѕСЃС‚Р°РЅРѕРІРєРµ Р°РІС‚РѕР±СѓСЃР°
-//! @param Podveska     РћС‚РІРµС‡Р°РµС‚ Р·Р° РїРѕР»РѕР¶РµРЅРёРµ РєСѓР·РѕРІР°
-//! @param Kolesa       РЈРІРµР»РёС‡РёРІР°РµС‚ РґРёР°РјРµС‚СЂ РєРѕР»РµСЃ
-//! @param Glushitel    Р”Р°Р»СЊРЅРѕСЃС‚СЊ РІС‹С…Р»РѕРїРЅС‹С… РіР°Р·РѕРІ
-//! @param Size         Р Р°Р·РјРµСЂ Р°РІС‚РѕР±СѓСЃР°
-//! @param DveriDown    РџРµСЂРµРјРµС‰РµРЅРёРµ РґРІРµСЂРµР№ РІРЅРёР·
-//! @param DveriSide    РџРµСЂРµРјРµС‰РµРЅРёРµ РґРІРµСЂРµР№ РІ СЃС‚РѕСЂРѕРЅС‹
-//!
-//! @note               РќР°С‡Р°Р»СЊРЅРѕР№ С‚РѕС‡РєРѕР№ СЏРІР»СЏРµС‚СЃСЏ Р»РµРІР°СЏ РЅРёР¶РЅСЏСЏ С‚РѕС‡РєР° РєСѓР·РѕРІР°
-//!
-//! @par                РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ:
-//!
-//! @code               BusRDraw (1400, 450, 1, TX_DARKGRAY, 20, 15, 40, 1.25, 10, 25);
+//! @code
+//!         BusRDraw (800, 450, 1, TX_DARKGRAY, 20, 5, 0, 1.25, 10, 25);
 //! @endcode
 //}------------------------------------------------------------------------------------------------------
 
@@ -1376,33 +1444,39 @@ void BusRDraw (int x, int y, int Zajiganie, COLORREF Stop, int Podveska, int Kol
     }
 
 //{------------------------------------------------------------------------------------------------------
-//! Р РёСЃСѓРµС‚ РїСЂРµРєСЂР°СЃРЅСѓСЋ РјР°РґРјСѓР°Р·РµР»СЊ
+//! @ingroup Geroi
 //!
-//! @param x            x-РєРѕРѕСЂРґРёРЅР°С‚Р° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ РјР°РґРјСѓР°Р·РµР»СЊ
-//! @param y            y-РєРѕРѕСЂРґРёРЅР°С‚Р° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ РјР°РґРјСѓР°Р·РµР»СЊ
-//! @param Glaza        Р Р°Р·РјРµСЂ РіР»Р°Р·. РЎР»СѓР¶РёС‚ РґР»СЏ РїРµСЂРµРґР°С‡Рё РіР»СѓР±РѕРєРѕРіРѕ СѓРґРёРІР»РµРЅРёСЏ, Р·Р° СЃС‡С‘С‚ СѓРІРµР»РёС‡РµРЅРёСЏ СЂР°РґРёСѓСЃР°
-//! @param Zrachki      Р Р°Р·РјРµСЂ Р·СЂР°С‡РєРѕРІ. РЎР»СѓР¶РёС‚ РґР»СЏ С‚РѕРіРѕ Р¶Рµ, С‡С‚Рѕ Рё РїР°СЂР°РјРµС‚СЂ "Glaza"
-//! @param Rot          РџРѕР·РІРѕР»СЏРµС‚ РѕС‚РєСЂС‹С‚СЊ Рё Р·Р°РєСЂС‹С‚СЊ СЂРѕС‚ РґР°РјРµ, Р·Р° СЃС‡С‘С‚ СѓРІРµР»РёС‡РµРЅРёСЏ С€РёСЂРёРЅС‹ СЌР»Р»РёРїСЃР°))
-//! @param UpRukaL      РџРѕРґРЅРёРјР°РµС‚ Р»РµРІСѓСЋ СЂСѓРєСѓ. 0 - РѕРїСѓС‰РµРЅРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ, 1 - РїРѕРґРЅСЏС‚РѕРµ
-//! @param UpRukaP      РџРѕРґРЅРёРјР°РµС‚ РїСЂР°РІСѓСЋ СЂСѓРєСѓ. 0 - РѕРїСѓС‰РµРЅРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ, 1 - РїРѕРґРЅСЏС‚РѕРµ
-//! @param UpNogaL      РџРѕРґРЅРёРјР°РµС‚ Р»РµРІСѓСЋ РЅРѕРіСѓ. 0 - РѕРїСѓС‰РµРЅРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ, 1 - РїРѕРґРЅСЏС‚РѕРµ
-//! @param UpNogaP      РџРѕРґРЅРёРјР°РµС‚ РїСЂР°РІСѓСЋ РЅРѕРіСѓ. 0 - РѕРїСѓС‰РµРЅРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ, 1 - РїРѕРґРЅСЏС‚РѕРµ
-//! @param Naushniki    Р РёСЃСѓРµС‚ РЅР°СѓС€РЅРёРєРё РЅР° РіРѕР»РѕРІРµ РјР°РґР°Рј. 0 - РЅР°СѓС€РЅРёРєРё СЃРЅСЏС‚С‹, 1 - РЅР°СѓС€РЅРёРєРё РЅР°РґРµС‚С‹
-//! @param Telephon     Р РёСЃСѓРµС‚ С‚РµР»РµС„РѕРЅ РІ РїСЂР°РІРѕР№ СЂСѓРєРµ. 0 - С‚РµР»РµС„РѕРЅР° РЅРµС‚, 1 - РїРѕСЏРІРёР»СЃСЏ
-//! @param Size         Р Р°Р·РјРµСЂ РјР°РґРјСѓР°Р·РµР»СЊ
+//! Рисует прекрасную мадмуазель
 //!
-//! @note               Р›РµРІР°СЏ/РїСЂР°РІР°СЏ СЃС‚РѕСЂРѕРЅР° РѕРїСЂРµРґРµР»СЏРµС‚СЃСЏ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ СЃРёРґСЏС‰РµРіРѕ Р·Р° РєРѕРјРїСЊСЋС‚РµСЂРѕРј
-//! @note               РќР°С‡Р°Р»СЊРЅРѕР№ С‚РѕС‡РєРѕР№ СЏРІР»СЏРµС‚СЃСЏ С†РµРЅС‚СЂ РіРѕР»РѕРІС‹
+//! @param x                x-координата расположения мадмуазель
+//! @param y                y-координата расположения мадмуазель
+//! @param Anfas            Разворачивает мадмуазель. 0 - мадам стоит спиной к зрителю, 1 - лицом
+//! @param StoitNaNogah     Усаживает мадам на какую-либо поверхность. 0 - мадам сидит, 1 - стоит
+//! @param Glaza            Размер глаз. Служит для передачи глубокого удивления, за счёт увеличения радиуса
+//! @param Zrachki          Даёт возможность выбрать цвет глаз для мадам.
+//! @param Rot              Этот параметр делает мадам почти идеальной женщиной,
+//!                         т.к. позволяет открыть и закрыть ей рот.
+//!                         Происходит это за счёт увеличения/уменьшения ширины эллипса
+//! @param UpRukaL          Поднимает левую руку. 0 - опущенное положение, 1 - поднятое
+//! @param UpRukaP          Поднимает правую руку. 0 - опущенное положение, 1 - поднятое
+//! @param UpNogaL          Поднимает левую ногу. 0 - опущенное положение, 1 - поднятое
+//! @param UpNogaP          Поднимает правую ногу. 0 - опущенное положение, 1 - поднятое
+//! @param Naushniki        Рисует наушники на голове мадам. 0 - наушники сняты, 1 - наушники надеты
+//! @param Telephon         Рисует телефон в правой руке. 0 - телефона нет, 1 - появился
+//! @param Size             Габариты мадмуазель
 //!
-//! @par                РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ:
+//! @note                   Левая/правая сторона определяется относительно сидящего за компьютером
 //!
-//! @code               MadamDraw (1100, 180, 2, TX_BLUE, 1, 1, 0, 1, 1, 0, 1, 2);
+//! @par                    Пример использования:
+//!
+//! @code
+//!         MadamDraw (1100, 180, 1, 1, 2, TX_BLUE, 1, 1, 0, 1, 1, 0, 1, 2);
 //! @endcode
 //}------------------------------------------------------------------------------------------------------
 
-void MadamDraw (int x, int y, int Glaza, COLORREF Zrachki, int Rot,
-                int UpRukaL, int UpRukaP, int UpNogaL, int UpNogaP,
-                int Naushniki, int Telephon, double Size)
+void MadamDraw (int x, int y, int Anfas, int StoitNaNogah, int Glaza, COLORREF Zrachki,
+                int Rot, int UpRukaL, int UpRukaP, int UpNogaL, int UpNogaP, int Naushniki,
+                int Telephon, double Size)
     {
     txSetColor (TX_MYBROWN);
     txSetFillColor (TX_MYBROWN);
@@ -1416,7 +1490,7 @@ void MadamDraw (int x, int y, int Glaza, COLORREF Zrachki, int Rot,
 
     txSetColor (TX_MYBROWN);
     txSetFillColor (TX_WHITE);
-    txCircle (x, y, 20 * Size);
+    txCircle (x, y, 20 * Anfas * Size);
 
     txSetColor (TX_BLACK);
     txSetFillColor (TX_BLACK);
@@ -1433,20 +1507,102 @@ void MadamDraw (int x, int y, int Glaza, COLORREF Zrachki, int Rot,
                             {ROUND (x - 25 * Size), ROUND (y - 10 * Size)},
                             {ROUND (x - 25 * Size), ROUND (y + 10 * Size)}};
 
-    txPolygon (naushniki, 12*Naushniki);
+    txPolygon (naushniki, 12 * Naushniki * Anfas);
 
     txSetFillColor (TX_WHITE);
-    txCircle (x - 7 * Size, y - 5 * Size, 2 * Glaza * Size);
-    txCircle (x + 7 * Size, y - 5 * Size, 2 * Glaza * Size);
+    txCircle (x - 7 * Size, y - 5 * Size, 2 * Glaza * Anfas * Size);
+    txCircle (x + 7 * Size, y - 5 * Size, 2 * Glaza * Anfas * Size);
 
     txSetColor (TX_BLACK);
     txSetFillColor (Zrachki);
-    txCircle (x - 7 * Size, y - 5 * Size, 2 * Size);
-    txCircle (x + 7 * Size, y - 5 * Size, 2 * Size);
+    txCircle (x - 7 * Size, y - 5 * Size, 2 * Anfas * Size);
+    txCircle (x + 7 * Size, y - 5 * Size, 2 * Anfas * Size);
 
     txSetColor (TX_RED);
     txSetFillColor (TX_RED);
-    txEllipse (x - 7 * Size, y + (10 - Rot) * Size, x + 7 * Size, y + (10 + Rot) * Size);
+    txEllipse (x - 7 * Anfas * Size, y + (10 - Rot) * Anfas * Size,
+               x + 7 * Anfas * Size, y + (10 + Rot) * Anfas * Size);
+
+    txSetColor (TX_BLACK, 2);
+    txLine (x - 13 * Size, y + 45 * Size, x - 40 * Size, y + (55 - 30 * UpRukaL) * Size);
+    txLine (x + 13 * Size, y + 45 * Size, x + 40 * Size, y + (55 - 30 * UpRukaP) * Size);
+
+    txLine (x - 13 * Size, y + 80 * Size, x - 13 * Size, y + (80 + 10 * StoitNaNogah + 20 * UpNogaL * StoitNaNogah) * Size);
+    txLine (x + 13 * Size, y + 80 * Size, x + 13 * Size, y + (80 + 10 * StoitNaNogah + 20 * UpNogaP * StoitNaNogah) * Size);
+
+    txSetColor (TX_PINK);
+    txSetFillColor (TX_PINK);
+    POINT telo[5] = {{ROUND (x -  4 * Size), ROUND (y +  30               * Size)},
+                     {       x,              ROUND (y + (30 - 10 * Anfas) * Size)},
+                     {ROUND (x +  4 * Size), ROUND (y +  30               * Size)},
+                     {ROUND (x + 30 * Size), ROUND (y +  80               * Size)},
+                     {ROUND (x - 30 * Size), ROUND (y +  80               * Size)}};
+    txPolygon (telo, 5);
+
+    txSetColor (TX_BLACK);
+    txSetFillColor (TX_BLUE);
+    POINT telephon [4] = {{ROUND (x - (40 -  80 * Anfas) * Size),
+                           ROUND (y + (47 - (30 * UpRukaP * Anfas) - (30 * UpRukaL * (-1 * (-1 + Anfas)))) * Size)},
+                          {ROUND (x - (52 - 104 * Anfas) * Size),
+                           ROUND (y + (47 - (30 * UpRukaP * Anfas) - (30 * UpRukaL * (-1 * (-1 + Anfas)))) * Size)},
+                          {ROUND (x - (52 - 104 * Anfas) * Size),
+                           ROUND (y + (65 - (30 * UpRukaP * Anfas) - (30 * UpRukaL * (-1 * (-1 + Anfas)))) * Size)},
+                          {ROUND (x - (40 -  80 * Anfas) * Size),
+                           ROUND (y + (65 - (30 * UpRukaP * Anfas) - (30 * UpRukaL * (-1 * (-1 + Anfas)))) * Size)}};
+
+    txPolygon (telephon, 4 * Telephon);
+    }
+
+//{------------------------------------------------------------------------------------------------------
+//! @ingroup Geroi
+//!
+//! Рисует прекрасную мадмуазель в профиль
+//!
+//! @param x                x-координата расположения мадмуазель
+//! @param y                y-координата расположения мадмуазель
+//! @param UpRukaL          Поднимает левую руку. 0 - опущенное положение, 1 - поднятое
+//! @param UpRukaP          Поднимает правую руку. 0 - опущенное положение, 1 - поднятое
+//! @param UpNogaL          Поднимает левую ногу. 0 - опущенное положение, 1 - поднятое
+//! @param UpNogaP          Поднимает правую ногу. 0 - опущенное положение, 1 - поднятое
+//! @param Size             Габариты мадмуазель
+//! @param Storona          Определяет сторону профиля.
+//!                         -1 - мадмуазель направлена в левую сторону, 1 - в правую
+//!
+//! @par                    Пример использования:
+//!
+//! @code
+//!         MadamDrawProfil (1100, 180, TX_BLUE, 1, 0, 0, 0, 2, -1);
+//! @endcode
+//}------------------------------------------------------------------------------------------------------
+
+void MadamDrawProfil (int x, int y, COLORREF Zrachki, int UpRukaL, int UpRukaP,
+                      int UpNogaL, int UpNogaP, double Size, int Storona)
+    {
+    txSetColor (TX_MYBROWN);
+    txSetFillColor (TX_WHITE);
+    txCircle (x, y, 20 * Size);
+
+    txSetColor (TX_BLACK);
+    txSetFillColor (TX_WHITE);
+    txCircle (x + 11 * Size * Storona, y - 5 * Size, 4 * Size);
+
+    txSetColor (TX_BLACK);
+    txSetFillColor (Zrachki);
+    txCircle (x + 11 * Size * Storona, y - 5 * Size, 2 * Size);
+
+    txSetColor (TX_MYBROWN);
+    txSetFillColor (TX_MYBROWN);
+    POINT volosy[7] = {{       x,                            ROUND (y + 40 * Size)},
+                       {ROUND (x - (30 * Storona) * Size), ROUND (y + 40 * Size)},
+                       {ROUND (x - (40 * Storona) * Size), ROUND (y + 20 * Size)},
+                       {ROUND (x - (20 * Storona) * Size), ROUND (y - 30 * Size)},
+                       {       x,                            ROUND (y - 30 * Size)},
+                       {ROUND (x + (10 * Storona) * Size), ROUND (y - 20 * Size)},
+                       {       x,                            ROUND (y +  5 * Size)}};
+    txPolygon (volosy, 7);
+
+    txSetColor (TX_BLACK, 2);
+    txLine (x, y + 50 * Size, x + (20 * Storona - 10 * UpRukaL) * Size, y + (40 - 10 * Storona * UpRukaL) * Size);
 
     txSetColor (TX_PINK);
     txSetFillColor (TX_PINK);
@@ -1456,17 +1612,130 @@ void MadamDraw (int x, int y, int Glaza, COLORREF Zrachki, int Rot,
     txPolygon (telo, 3);
 
     txSetColor (TX_BLACK, 2);
-    txLine (x - 13 * Size, y + 45 * Size, x - 40 * Size, y + (55 - 30 * UpRukaL) * Size);
-    txLine (x + 13 * Size, y + 45 * Size, x + 40 * Size, y + (55 - 30 * UpRukaP) * Size);
+    txLine (x, y + 50 * Size, x + (20 * Storona - 10 * UpRukaP) * Size, y + (40 - 10 * Storona * UpRukaP) * Size);
 
     txLine (x - 13 * Size, y + 80 * Size, x - 13 * Size, y + (110 - 20 * UpNogaL) * Size);
     txLine (x + 13 * Size, y + 80 * Size, x + 13 * Size, y + (110 - 20 * UpNogaP) * Size);
+    }
+
+//{------------------------------------------------------------------------------------------------------
+//! @ingroup VtoroiPlan
+//!
+//! Рисует мужчину
+//!
+//! @param x            x-координата расположения мистера
+//! @param y            y-координата расположения мистера
+//! @param Anfas        Разворачивает мужчину. 0 - мужчина стоит спиной к зрителю, 1 - лицом
+//! @param Glaza        Размер глаз. Служит для передачи глубокого удивления, за счёт увеличения радиуса
+//! @param Zrachki      Даёт возможность выбрать цвет глаз мужчины
+//! @param Rot          Этот параметр делает мужчину, так же как и мадам, почти идеальным,
+//!                     т.к. позволяет открыть и закрыть ему рот.
+//!                     Происходит это за счёт увеличения/уменьшения ширины эллипса
+//! @param UpRukaL      Поднимает левую руку. 0 - опущенное положение, 1 - поднятое
+//! @param UpRukaP      Поднимает правую руку. 0 - опущенное положение, 1 - поднятое
+//! @param Size         Размер изображения мистера
+//!
+//! @note               Левая/правая сторона определяется относительно сидящего за компьютером
+//!
+//! @par                Пример использования:
+//!
+//! @code
+//!         MisterDraw (1100, 180, 1, 2, TX_BROWN, 1, 1, 1, 0, 0, 2);
+//! @endcode
+//}------------------------------------------------------------------------------------------------------
+
+void MisterDraw (int x, int y, int Anfas, int Glaza, COLORREF Zrachki, int Rot,
+                int UpRukaL, int UpRukaP, int UpNogaL, int UpNogaP, double Size)
+    {
+    txSetColor (TX_MYBROWN);
+    txSetFillColor (TX_WHITE);
+    txCircle (x, y, 20 * Size);
 
     txSetColor (TX_BLACK);
+    txSetFillColor (TX_BLACK);
+    txRectangle (x - 20 * Size, y - 25 * Size, x + 20 * Size, y - 10 * Size);
+
+    txSetColor (TX_BLACK);
+    txSetFillColor (TX_WHITE);
+    txCircle (x - 7 * Size, y - 5 * Size, 2 * Glaza * Anfas * Size);
+    txCircle (x + 7 * Size, y - 5 * Size, 2 * Glaza * Anfas * Size);
+
+    txSetColor (TX_BLACK);
+    txSetFillColor (Zrachki);
+    txCircle (x - 7 * Size, y - 5 * Size, 2 * Anfas * Size);
+    txCircle (x + 7 * Size, y - 5 * Size, 2 * Anfas * Size);
+
+    txSetColor (TX_RED);
+    txSetFillColor (TX_RED);
+    txEllipse (x - 7 * Anfas * Size, y + (10 - Rot) * Anfas * Size,
+               x + 7 * Anfas * Size, y + (10 + Rot) * Anfas * Size);
+
+    txSetColor (TX_BLUE);
     txSetFillColor (TX_BLUE);
-    POINT telephon [4] = {{ROUND (x + 40 * Size), ROUND (y + (47 - 30 * UpRukaP) * Size)},
-                          {ROUND (x + 52 * Size), ROUND (y + (47 - 30 * UpRukaP) * Size)},
-                          {ROUND (x + 52 * Size), ROUND (y + (65 - 30 * UpRukaP) * Size)},
-                          {ROUND (x + 40 * Size), ROUND (y + (65 - 30 * UpRukaP) * Size)}};
-    txPolygon (telephon, 4 * Telephon);
+    POINT telo[3] = {{ ROUND (x - 20 * Size), ROUND (y + 20 * Size)},
+                     { ROUND (x + 20 * Size), ROUND (y + 20 * Size)},
+                     {        x,              ROUND (y + 80 * Size)}};
+    txPolygon (telo, 3);
+
+    txSetColor (TX_BLACK, 2);
+    txLine (x - 13 * Size, y + 40 * Size, x - (25 + 15 * UpRukaL) * Size, y + (70 - 50 * UpRukaL) * Size);
+    txLine (x + 13 * Size, y + 40 * Size, x + (25 + 15 * UpRukaL) * Size, y + (70 - 50 * UpRukaP) * Size);
+
+    txLine (x, y + 80 * Size, x - 15 * Size, y + (110 - 15 * UpNogaL) * Size);
+    txLine (x, y + 80 * Size, x + 15 * Size, y + (110 - 15 * UpNogaP) * Size);
+    }
+
+//{------------------------------------------------------------------------------------------------------
+//! @ingroup VtoroiPlan
+//!
+//! Рисует мужчину в профиль
+//!
+//! @param x            x-координата расположения мистера
+//! @param y            y-координата расположения мистера
+//! @param UpNogaL      Поднимает левую ногу. 0 - опущенное положение, 1 - поднятое
+//! @param UpNogaP      Поднимает правую ногу. 0 - опущенное положение, 1 - поднятое
+//! @param Size         Размер изображения мистера
+//! @param Storona      Определяет сторону профиля.
+//!                     -1 - мужчина направлен в правую сторону, 1 - в левую
+//!
+//! @note               Левая/правая сторона определяется относительно сидящего за компьютером
+//!
+//! @par                Пример использования:
+//!
+//! @code
+//!         MisterDrawProfil (1100, 180, TX_BROWN, 0, 0, 1.5, -1);
+//! @endcode
+//}------------------------------------------------------------------------------------------------------
+
+void MisterDrawProfil (int x, int y, COLORREF Zrachki, int UpNogaL, int UpNogaP, double Size, int Storona)
+    {
+    txSetColor (TX_MYBROWN);
+    txSetFillColor (TX_WHITE);
+    txCircle (x, y, 20 * Size);
+
+    txSetColor (TX_BLACK);
+    txSetFillColor (TX_WHITE);
+    txCircle (x - 7 * Size * Storona, y - 5 * Size, 4 * Size);
+
+    txSetColor (TX_BLACK);
+    txSetFillColor (Zrachki);
+    txCircle (x - 7 * Size * Storona, y - 5 * Size, 2 * Size);
+
+    txSetColor (TX_BLACK, 2);
+    txSetFillColor (TX_BLACK);
+    txRectangle (x - 20 * Size, y - 25 * Size, x + 20 * Size, y - 10 * Size);
+    txLine (x - 40 * Size * Storona, y - 10 * Size, x - 20 * Size * Storona, y - 10 * Size);
+
+    txSetColor (TX_BLUE);
+    txSetFillColor (TX_BLUE);
+    POINT telo[3] = {{ROUND (x - 20 * Size), ROUND (y + 20 * Size)},
+                     {ROUND (x + 20 * Size), ROUND (y + 20 * Size)},
+                     {       x,              ROUND (y + 80 * Size)}};
+    txPolygon (telo, 3);
+
+    txSetColor (TX_BLACK, 2);
+    txLine (x, y + 40 * Size, x - 20 * Size * Storona, y + 60 * Size);
+
+    txLine (x, y + 80 * Size, x - 15 * Size, y + (110 - 15 * UpNogaL) * Size);
+    txLine (x, y + 80 * Size, x + 15 * Size, y + (110 - 15 * UpNogaP) * Size);
     }
