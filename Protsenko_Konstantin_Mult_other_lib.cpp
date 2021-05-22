@@ -91,7 +91,7 @@ void drawEpisode1 ()
             {
             drawCloud (i*150 - 100, 20 + rand()%50, 50 - t%20);
             }
-
+        
         drawMan    (200 - t*2, 550, 80, 170, TX_YELLOW, -0.1 - t%2/10.0, 0 + t%2/10.0, 0.1 - t%2/2.0, -0.8, t%4);
         drawPuddle (t, 0);
         drawRain   (0, 70, 15);
