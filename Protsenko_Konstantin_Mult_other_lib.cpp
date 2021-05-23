@@ -91,7 +91,7 @@ void drawEpisode1 ()
             {
             drawCloud (i*150 - 100, 20 + rand()%50, 50 - t%20);
             }
-        
+
         drawMan    (200 - t*2, 550, 80, 170, TX_YELLOW, -0.1 - t%2/10.0, 0 + t%2/10.0, 0.1 - t%2/2.0, -0.8, t%4);
         drawPuddle (t, 0);
         drawRain   (0, 70, 15);
@@ -196,7 +196,7 @@ void drawEpisode4 ()
         if (120 < t && t <= 150)
             {
             BusRDraw  (1000, 550, 0, TX_MYRED, 0, 0, 0, 1.3, 10, 25);
-            MadamDraw ( 800, 500, 2, TX_BLUE, 1, 0, 0, 0, 0, 0, 0, 1.1);
+            MadamDraw ( 800, 500, 1, 1, 1, TX_BLUE, 1, 0, 0, 0, 0, 0, 0, 1.1);
             }
         txSleep (5*DELAY);
         txEnd ();
@@ -212,7 +212,7 @@ void drawEpisode4 ()
         drawHouses ();
         drawSun    (880,  90,  60, t%10 + 10, t%5, t%10 + 5);
         BusRDraw   (1000, 550, 0, TX_MYRED, 0, 0, 0, 1.3, 10, 25);
-        MadamDraw  (ROUND(800 + t/1.3), 500, 2, TX_BLUE, 1, 0, 0, 0, 0, 1, 1, 1.1);
+        MadamDraw  (ROUND(800 + t/1.3), 500, 1, 1, 1, TX_BLUE, 1, 0, 0, 0, 0, 1, 1, 1.1);
         drawMan    (100 + t, 550 + t/6, 80, 170, TX_YELLOW, -0.1, 0 , 0.1 - t%2/2.0, 0.1, 2 + t/70);
 
         txSetColor (TX_RED);
@@ -263,14 +263,14 @@ void drawEpisode5 ()
 
         if (t <= 250)
             {
-            MadamBokDraw (1250 - 2*t, 300 + t/2, 0, 0, 0 + (t/20)%2, 1 - (t/20)%2, 1.5, -1);
+            MadamDrawProfil (1250 - 2*t, 300 + t/2, TX_GRAY, 0, 0, 0 + (t/20)%2, 1 - (t/20)%2, 1.5, -1);
             drawMan      (2*t, 500 + t/5, 100, 180, TX_GRAY, -0.1, 0, 0.1 - t%2/2.0, -0.2, 2 + t/150);
             drawRocket   (70 + 2*t, 350 + t/5, 0.3, 0.4, TX_WHITE, 0);
             Serdechko    (2*t, 400 + t/5, t%10/10.0);
             }
         else
             {
-            MadamBokDraw (850, 425, 0, 0, 0, 0, 1.5, -1);
+            MadamDrawProfil (850, 425, TX_GRAY, 0, 0, 0, 0, 1.5, -1);
             drawMan      (500, 550, 100, 180, TX_GRAY, -0.1, 0, 0.1, -0.2, 2);
             drawRocket   (570, 400, 0.3, 0.4, TX_WHITE, 0);
             Serdechko    (500, 450, t%10/10.0);
@@ -315,7 +315,7 @@ void drawEpisode6 ()
         drawRocket (570, 400, 0.3, 0.4, TX_WHITE, 0);
 
         Rybak (200, 210, 0 + (t/100)%2, 1);
-        MadamBokDraw (850 + t*2, 500 - t/3, 0, 0, 0 + (t/20)%2, 1 - (t/20)%2, 1.5, 1);
+        MadamDrawProfil (850 + t*2, 500 - t/3, TX_GRAY, 0, 0, 0 + (t/20)%2, 1 - (t/20)%2, 1.5, 1);
 
         MnogoTravi (480, t);
 
