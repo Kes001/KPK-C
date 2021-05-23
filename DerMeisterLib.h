@@ -5,7 +5,7 @@
 //!
 //! @mainpage
 //!     DerMeisterLib.h - библиотека функций, реализованная с помощью TXLib.h.
-//!     Данная библиотека писалась с огромной любовью для создания мультипликационного фильма.
+//!     Данная библиотека писалась для создания мультипликационного фильма с огромной любовью.
 //!
 //!     Основными объектами библиотеки являются:
 //!     @image html     Objects.jpg
@@ -1739,4 +1739,3 @@ void MisterDrawProfil (int x, int y, COLORREF Zrachki, int UpNogaL, int UpNogaP,
     txLine (x, y + 80 * Size, x - 15 * Size, y + (110 - 15 * UpNogaL) * Size);
     txLine (x, y + 80 * Size, x + 15 * Size, y + (110 - 15 * UpNogaP) * Size);
     }
-//! Чужая библиотека
